@@ -1,0 +1,278 @@
+
+/* bootstrap grid vertical gutter */
+.row.vertical-gutter > [class*='col-'],
+.row.vertical-gutter > [class*='col-'] {
+    padding-top: 30px;
+}
+.row.vertical-gutter {
+    margin-top: -30px;
+}
+
+/* navbar fixes */
+.navbar-youplay {
+    margin-bottom: 0;
+}
+.navbar-youplay .navbar-brand {
+    line-height: 75px;
+}
+.navbar-youplay .navbar-nav > li > a {
+    text-transform: none;
+    padding: 30px 0;
+}
+
+/* remove title uppercase */
+.youplay-banner .info h1,
+.youplay-banner .info h2 {
+    text-transform: none;
+}
+
+/* Change banner full styles */
+.youplay-banner.full {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Banner image */
+.youplay-banner .image {
+    background-attachment: initial;
+    background-size: cover;
+}
+
+/* fix section offset */
+.youplay-section {
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    z-index: 1;
+}
+.youplay-section-image {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: #160962;
+}
+.youplay-section .image {
+    position: absolute;
+    opacity: .5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    z-index: -1;
+}
+.youplay-section-heading {
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.youplay-section-subheading {
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.youplay-section-heading + .youplay-section-subheading {
+    margin-top: -2rem;
+}
+.youplay-section-heading[data-app-remove-it="true"] + .youplay-section-subheading {
+    margin-top: 0;
+}
+
+footer {
+    padding-top: 3rem;
+}
+
+/* fix for carousel bottom info margin */
+.youplay-carousel .angled-img .bottom-info {
+    margin-bottom: 0;
+}
+
+/* fix features bottom margin */
+.youplay-features,
+.youplay-features .feature {
+    margin-bottom: 0;
+}
+
+
+/*------------------------------------------------------------------
+
+Testimonials
+
+-------------------------------------------------------------------*/
+.testimonials blockquote {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    min-height: 150px;
+    margin-bottom: 115px;
+    padding: 20px 30px;
+    border: none;
+}
+.testimonials blockquote:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -15px;
+    border-top: 15px solid rgba(255, 255, 255, 0.1);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+.testimonials blockquote img {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    bottom: -115px;
+    left: 50%;
+    margin-left: -45px;
+}
+.testimonials a,
+.testimonials a:hover,
+.testimonials a:active,
+.testimonials a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+.testimonials blockquote p.clients-words {
+    font-size: 14px;
+}
+.testimonials .author-name {
+    font-size: 14px;
+    text-align: right;
+}
+
+
+
+/*------------------------------------------------------------------
+
+Pricing Table
+
+-------------------------------------------------------------------*/
+.pricing-table {
+    list-style: none;
+    padding: 0 0 20px;
+    margin: 0 0 15px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    -webkit-transition: 300ms background-color;
+    transition: 300ms background-color;
+}
+.pricing-table ul {
+    list-style: none;
+    padding: 0;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.pricing-table ul li {
+    padding-left: 0;
+    padding-right: 0;
+}
+.pricing-table ul li:before {
+    width: 100%;
+    left: 0;
+}
+.pricing-table:hover {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+.pricing-table li {
+    position: relative;
+    padding: 20px 25px;
+}
+.pricing-table li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.pricing-table li.plan-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.pricing-table li.plan-price:before,
+.pricing-table li.plan-name:before,
+.pricing-table li.plan-action:before {
+    content: none;
+}
+.pricing-table li.plan-name {
+    padding: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 30px;
+}
+.pricing-table li.plan-action {
+    margin-top: 10px;
+}
+
+
+
+/*------------------------------------------------------------------
+
+Bootstrap Multi Columns Clearfix
+https://github.com/sixfootsixdesigns/Bootstrap-3-Grid-Columns-Clearing
+
+-------------------------------------------------------------------*/
+/* clear the first in row for any block that has the class "multi-columns-row" */
+.col-xs-6:nth-child(2n + 3) { clear: left; }
+.col-xs-4:nth-child(3n + 4) { clear: left; }
+.col-xs-3:nth-child(4n + 5) { clear: left; }
+.col-xs-2:nth-child(6n + 7) { clear: left; }
+.col-xs-1:nth-child(12n + 13) { clear: left; }
+@media (min-width: 768px) {
+    /* reset previous grid */
+    .col-xs-6:nth-child(2n + 3) { clear: none; }
+    .col-xs-4:nth-child(3n + 4) { clear: none; }
+    .col-xs-3:nth-child(4n + 5) { clear: none; }
+    .col-xs-2:nth-child(6n + 7) { clear: none; }
+    .col-xs-1:nth-child(12n + 13) { clear: none; }
+
+    /* clear first in row for small columns */
+    .col-sm-6:nth-child(2n + 3) { clear: left; }
+    .col-sm-4:nth-child(3n + 4) { clear: left; }
+    .col-sm-3:nth-child(4n + 5) { clear: left; }
+    .col-sm-2:nth-child(6n + 7) { clear: left; }
+    .col-sm-1:nth-child(12n + 13) { clear: left; }
+}
+@media (min-width: 992px) {
+    /* reset previous grid */
+    .col-sm-6:nth-child(2n + 3) { clear: none; }
+    .col-sm-4:nth-child(3n + 4) { clear: none; }
+    .col-sm-3:nth-child(4n + 5) { clear: none; }
+    .col-sm-2:nth-child(6n + 7) { clear: none; }
+    .col-sm-1:nth-child(12n + 13) { clear: none; }
+
+    /* clear first in row for medium columns */
+    .col-md-6:nth-child(2n + 3) { clear: left; }
+    .col-md-4:nth-child(3n + 4) { clear: left; }
+    .col-md-3:nth-child(4n + 5) { clear: left; }
+    .col-md-2:nth-child(6n + 7) { clear: left; }
+    .col-md-1:nth-child(12n + 13) { clear: left; }
+}
+@media (min-width: 1200px) {
+    /* reset previous grid */
+    .col-md-6:nth-child(2n + 3) { clear: none; }
+    .col-md-4:nth-child(3n + 4) { clear: none; }
+    .col-md-3:nth-child(4n + 5) { clear: none; }
+    .col-md-2:nth-child(6n + 7) { clear: none; }
+    .col-md-1:nth-child(12n + 13) { clear: none; }
+
+    /* clear first in row for large columns */
+    .col-lg-6:nth-child(2n + 3) { clear: left; }
+    .col-lg-4:nth-child(3n + 4) { clear: left; }
+    .col-lg-3:nth-child(4n + 5) { clear: left; }
+    .col-lg-2:nth-child(6n + 7) { clear: left; }
+    .col-lg-1:nth-child(12n + 13) { clear: left; }
+}
+
+
+
+/* Helpers */
+.text-white {
+    color: #fff !important;
+}
+.text-black {
+    color: #000 !important;
+}
