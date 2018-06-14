@@ -338,7 +338,7 @@ h1, .h1 {
   font-size: 42px; }
 
 h2, .h2 {
-  font-size: 42px; }
+  font-size: 36px; }
 
 h3, .h3 {
   font-size: 32px; }
@@ -6167,8 +6167,8 @@ button,
 
 .p-lg {
   font-size: 17px;
-  line-height: 30px;
-  margin-bottom: 30px; }
+  line-height: 25px;
+  margin-bottom: 25px; }
   @media (max-width: 1023px) {
     .p-lg {
       font-size: 15px;
@@ -8587,8 +8587,8 @@ body.noScroll {
 
 .header-content {
   position: relative;
-  padding-top: 35px;
-  padding-bottom: 35px; }
+  padding-top: 25px;
+  padding-bottom: 25px; }
   @media (max-width: 1229px) {
     .header-content {
       padding-top: 49.0196078431px;
@@ -10803,7 +10803,8 @@ body:not(.touch) .faq-wrap .nav-link:hover {
     .reviews-carousel {
       margin-top: 15px; } }
   .reviews-carousel:before {
-    content: 'â€œ';
+    --content: 'â€œ';
+    content: '“';
     position: absolute;
     left: -75px;
     top: -65px;

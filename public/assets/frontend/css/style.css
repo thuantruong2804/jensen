@@ -8546,8 +8546,8 @@ body.noScroll {
   .header-toggle-slide span {
     padding-left: 10px; } }
 .header-logo, .header-logo img {
-  max-width: 205px;
-  max-height: 60px; }
+  max-width: 245px;
+  max-height: 70px; }
 
 .header-content.stuck .header-logo, .header-content.stuck .header-logo img {
   max-height: 40px; }

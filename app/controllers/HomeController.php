@@ -66,7 +66,7 @@ class HomeController extends BaseController {
     public function index() {
         $input = array_map('trim', Input::all());
 
-        Session::put('title', 'Grand Theft Auto Vietnamese Community');
+        Session::put('title', 'Jensen Dental');
         Session::put('description', 'Cộng đồng Grand Theft Auto - San Andreas tại Việt Nam. Máy chủ chính thức với IP: GVC.WTF:7777. Bạn sẽ được trải nghiệm qua tất cả nhân vật trong cuộc sống thực tế để có thể phô diễn khả năng của chúng ta cho mọi người xem. Tất cả mọi thứ đã có trong GvC , bạn hãy vào để giao lưu , làm quen với mọi người nào !');
         Session::put('image', Asset('assets/images/banner-bg-1.png'));
         Session::put('url', URL::to('/'));
