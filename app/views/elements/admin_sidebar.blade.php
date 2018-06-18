@@ -15,7 +15,7 @@
             <li class="{{ Route::currentRouteName() == 'admin.new' ? 'active' : '' }}">
                 <a href="{{ URL::to('/admin/new') }}" title="Quản lý tin tức">
                     <i class="fa fa-lg fa-fw fa-file-text-o"></i> 
-                    <span class="menu-item-parent">Quản lý tin tức</span>
+                    <span class="menu-item-parent">Quản lý nội dung</span>
                 </a>
             </li>
             <li class="{{ Route::currentRouteName() == 'admin.ticket' ? 'active' : '' }}">

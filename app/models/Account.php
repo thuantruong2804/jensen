@@ -135,8 +135,8 @@ class Account extends Eloquent implements UserInterface {
      */
     public function validateEdit($input, $accountId){
          $rules = array(
-            'username' => 'required|min:5|max:50|account|unique:accounts,UserName,'.$accountId,
-            'email' => 'required|max:50|email|unique:accounts,Email,'.$accountId,
+            'username' => 'required|min:5|max:50|account|unique:accounts,username,'.$accountId,
+            'email' => 'required|max:50|email|unique:accounts,email,'.$accountId,
         );
             
         $validator = Validator::make($input, $rules);
@@ -154,12 +154,12 @@ class Account extends Eloquent implements UserInterface {
         
         if (!empty($input)) {   
             if (!empty($input['username'])) {
-                $query->where('UserName', 'LIKE', '%'.$input['username'].'%');
-                $appends['UserName'] = $input['username'];
+                $query->where('username', 'LIKE', '%'.$input['username'].'%');
+                $appends['username'] = $input['username'];
             }
-            if (isset($input['disabled']) && $input['disabled'] != -1) {
-                $query->where('Disabled', $input['disabled']);
-                $appends['disabled'] = $input['disabled'];
+            if (isset($input['status']) && $input['status'] != -1) {
+                $query->where('status', $input['status']);
+                $appends['status'] = $input['status'];
             } 
         }
         
@@ -178,11 +178,11 @@ class Account extends Eloquent implements UserInterface {
         
         if (!empty($input)) {   
             if (!empty($input['username'])) {
-                $query->where('UserName', 'LIKE', '%'.$input['username'].'%');
+                $query->where('username', 'LIKE', '%'.$input['username'].'%');
             }
-            if (isset($input['disabled']) && $input['disabled'] != -1) {
-                $query->where('Disabled', $input['disabled']);
-                $appends['disabled'] = $input['disabled'];
+            if (isset($input['status']) && $input['status'] != -1) {
+                $query->where('status', $input['status']);
+                $appends['status'] = $input['status'];
             } 
         }
         
@@ -195,14 +195,13 @@ class Account extends Eloquent implements UserInterface {
      * create account
      * @author Thuan Truong
      */
-    public function saveAccount($input, $disabled = 1, $registered = 0, $adminLevel = 0) {
+    public function saveAccount($input) {
         $account = new Account;
         
-        $account->UserName = $input['username'];
-        $account->Password = strtoupper(hash('whirlpool', $input['password']));
-        $account->Password_Clear = $input['password'];
-        $account->Email = $input['email'];
-        $account->active_key = uniqid('', true);
+        $account->username = $input['username'];
+        $account->password = Hash::make($input['password']);
+        $account->email = $input['email'];
+        $account->status = 1;
         $account->save();
 
         return $account;
@@ -215,8 +214,8 @@ class Account extends Eloquent implements UserInterface {
     public function updateAccount($input, $accountId) {
         $account = Account::find($accountId);
         
-        $account->UserName = $input['username'];
-        $account->Email = $input['email'];
+        $account->username = $input['username'];
+        $account->email = $input['email'];
 
         $account->update();
     }

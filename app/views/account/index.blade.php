@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý người chơi
+    Quản lý tài khoản
 @stop
 
 @section('style')
@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-table"></i> 
-                            <span> Danh sách người chơi</span>
+                            <span> Danh sách tài khoản</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
@@ -33,10 +33,10 @@
                                 </div>
                                 <div class="col-sm-4 form-group">
                                     <label>Trạng thái</label>
-                                    <select name="disabled" class="has-custom-select custom-input" id="disabled">
+                                    <select name="status" class="has-custom-select custom-input" id="disabled">
                                         <option value="-1">Tất cả</option>    
-                                        <option value="0" {{ isset($input['disabled']) && $input['disabled'] == 0 ? "selected='selected'" : '' }} >Đã duyệt</option>
-                                        <option value="1" {{ isset($input['disabled']) && $input['disabled'] == 1 ? "selected='selected'" : '' }} >Chưa duyệt</option>                                                    
+                                        <option value="1" {{ isset($input['status']) && $input['status'] == 1 ? "selected='selected'" : '' }} >Đã duyệt</option>
+                                        <option value="0" {{ isset($input['status']) && $input['status'] == 0 ? "selected='selected'" : '' }} >Chưa duyệt</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-1">
@@ -65,67 +65,35 @@
                                 <th class="fix-width-50 col-center">Mã</th>
                                 <th class="fix-width-200">Tên tài khoản</th>
                                 <th class="">Email</th>
-                                <th class="fix-width-150">Nhóm</th>
-                                <th class="fix-width-120">Ngày tạo</th>
                                 <th class="fix-width-100 col-center">Trạng thái</th>
-                                <th class="fix-width-150">Người duyệt/bỏ duyệt</th>
+                                <th class="fix-width-120">Ngày tạo</th>
                                 <th class="fix-width-150 col-center">@lang('form.label.action')</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($accounts as $account)
                                 <tr>
-                                    <td style="text-align: center !important;">{{ $account->ID }}</td>
-                                    <td>{{{ $account->UserName }}}</td>
-                                    <td>{{{ $account->Email }}}</td>
-                                    <td>
-                                        @if ($account->AdminLevel == 0)
-                                            Member
-                                        @elseif ($account->AdminLevel == 1)
-                                            Trial Administrator
-                                        @elseif ($account->AdminLevel == 2)
-                                            Junior Administrator
-                                        @elseif ($account->AdminLevel == 3)
-                                            General Administrator
-                                        @elseif ($account->AdminLevel == 4)
-                                            Senior Administrator
-                                        @elseif ($account->AdminLevel == 1337)
-                                            Head Administrator
-                                        @elseif ($account->AdminLevel == 1338)
-                                            Director Administrator
-                                        @elseif ($account->AdminLevel == 99999)
-                                            Executive Administrator
-                                        @endif
-                                    </td>
-                                    <td>{{ date('d-m-Y H:i', strtotime($account->created_at)) }}</td>
+                                    <td style="text-align: center !important;">{{ $account->id }}</td>
+                                    <td>{{{ $account->username }}}</td>
+                                    <td>{{{ $account->email }}}</td>
                                     <td class="col-center">
-                                        @if ($account->Disabled == 1)
+                                        @if ($account->status == 0)
                                             {{ "<span class=\"label label-default\">"."Chưa duyệt"."</span>" }}
                                         @else
                                             {{ "<span class=\"label label-success\">"."Đã duyệt"."</span>"; }}
                                         @endif
                                     </td>
+                                    <td>{{ date('d-m-Y H:i', strtotime($account->created_at)) }}</td>
                                     <td>
-                                        @if(!empty($account->ActiveBy))
-                                            <?php $accountActive = Account::find($account->ActiveBy); ?>
-                                            {{ $accountActive->UserName }}
-                                        @else
-                                            
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if ($currentAccount->AdminLevel == 99999 || $currentAccount->AdminLevel == 1338)
-                                        <a href="{{ URL::to('/admin/account/edit/'.$account->ID) }}" class="btn btn-primary has-tooltip" title="Sửa"><i class="fa fa-pencil-square-o"></i></a>
-                                        @endif
-                                        @if ($account->Disabled)
-                                        <a href="{{ URL::to('/admin/account/status/' . $account->ID) }}" 
+                                        <a href="{{ URL::to('/admin/account/edit/'.$account->id) }}" class="btn btn-primary has-tooltip" title="Sửa"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="{{ URL::to('/admin/account/status/' . $account->id) }}"
                                            class="btn btn-success public-user has-tooltip" 
-                                           title="{{ (!$account->Disabled) ? 'Bỏ duyệt' : 'Duyệt' }}"
+                                           title="{{ ($account->status) ? 'Bỏ duyệt' : 'Duyệt' }}"
                                            data-method="post" data-type="json" 
-                                           data-confirm="{{ (!$account->Disabled) ? 'Bạn có muốn bỏ duyệt tài khoản này?' : 'Bạn chắc chắn muốn duyệt tài khoản này?' }}"              
-                                           data-action1="{{ "<i class='fa fa-times'></i> ".Lang::get('form.label.cancel') }}" data-action2="{{ "<i class='fa fa-check'></i> " . Lang::get('form.label.ok') }}" data-table='1' id="action-order-{{ $account->ID }}">
-                                           <i class="fa {{ !$account->Disabled ? 'fa-arrow-down' : 'fa-arrow-up' }}"></i></a>
-                                        <a href="{{ URL::to('/admin/account/delete/'.$account->ID) }}" 
+                                           data-confirm="{{ ($account->status) ? 'Bạn có muốn bỏ duyệt tài khoản này?' : 'Bạn chắc chắn muốn duyệt tài khoản này?' }}"
+                                           data-action1="{{ "<i class='fa fa-times'></i> ".Lang::get('form.label.cancel') }}" data-action2="{{ "<i class='fa fa-check'></i> " . Lang::get('form.label.ok') }}" data-table='1' id="action-order-{{ $account->id }}">
+                                           <i class="fa {{ $account->status ? 'fa-arrow-down' : 'fa-arrow-up' }}"></i></a>
+                                        <a href="{{ URL::to('/admin/account/delete/'.$account->id) }}"
                                             class="delete-account btn btn-danger has-tooltip" 
                                             title="Từ chối"
                                             data-method="post" 
@@ -134,7 +102,6 @@
                                             data-action1="<i class='fa fa-times'></i> @lang('form.label.cancel')"
                                             data-action2="<i class='fa fa-check'></i> @lang('form.label.delete')">
                                             <i class="fa fa-trash-o"></i></a>
-                                        @endif
                                     </td>
                                 </tr>
                             @endforeach

@@ -8,19 +8,6 @@ class AccountController extends \BaseController {
         $this->email = $email;
     }
     
-    public function check($username, $password) {
-        $isExistUserName = false;
-        //$isExistUserName = Account::whereRaw('UserName = ?', $username)->first();
-        if($isExistUserName) {
-            echo "1";
-        }
-        else {
-            echo "0";
-        }
-        //echo "1";
-    }
-
-
     /**
      * list all account 
      * @author Thuan Truong
@@ -53,12 +40,12 @@ class AccountController extends \BaseController {
         if (!empty($input)) {
             $validator = $this->account->validateRegister($input);
             if ($validator->passes()) {
-                if (strpos($input['username'], '_') !== false && substr($input['username'], -1) != '_') {
-                    $this->account->saveAccount($input, 0, 1, $input['admin_level']);
-                    Session::flash('f_notice', 'Tạo mới tài khoản thành công');  
+                if($input['confirm_password'] == $input['password']){
+                    $this->account->saveAccount($input, 0, 1);
+                    Session::flash('f_notice', 'Tạo mới tài khoản thành công');
                     return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => URL::to('/admin/account')));
                 } else {
-                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => array('username' => array('Tài khoản phải chứa ký tự "_"'))));
+                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => array('confirm_password' => array('Nhập lại mật khẩu không khớp'))));
                 }
             } else {
                 if (Request::ajax()) {
@@ -114,17 +101,14 @@ class AccountController extends \BaseController {
         $account = Account::find($id);
         
         if (!empty($account)) {
-                $status = $account->Disabled;
-                $account->Disabled = 0;
-                $account->ActiveBy = $currentAccount->ID;
-                $account->Password_Clear = '';
-                $account->forum_id = $response->id;
+                $status = $account->status;
+                $account->status = 0;
                 if (!$status) {
-                    $account->Disabled = 1;
+                    $account->status = 1;
                 }
                 $account->update();
 
-                Session::flash('f_notice', $account->Disabled  ? 'Người chơi đã được bỏ duyệt thành công' : 'Người chơi đã được duyệt thành công');
+                Session::flash('f_notice', !$account->status  ? 'Người dùng đã được bỏ duyệt thành công' : 'Người dùng đã được duyệt thành công');
                 return Response::json(array(
                     'status' => 1,
                     'href' => URL::to('/admin/account'),

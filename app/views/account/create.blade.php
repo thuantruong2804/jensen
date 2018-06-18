@@ -30,12 +30,14 @@
                 )) }}
                     <div class="content-form">
                         <div class="row">
-                            <input type="hidden" name="admin_level" class="form-control" value="0"></input>
                             <div class="col-md-6 form-group">
                                 <label>Tên tài khoản <span class="required"> *</span></label>
                                 <input type="text" name="username" class="form-control" style="text-transform: lowercase;"></input>
                             </div>
-                            
+                            <div class="col-md-6 form-group">
+                                <label>Email <span class="required"> *</span></label>
+                                <input type="text" name="email" class="form-control"></input>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
@@ -45,16 +47,6 @@
                             <div class="col-md-6 form-group">
                                 <label>Nhập lại mật khẩu <span class="required"> *</span></label>
                                 <input type="password" name="confirm_password" class="form-control"></input>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label>Email <span class="required"> *</span></label>
-                                <input type="text" name="email" class="form-control"></input>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label>Mật khẩu cấp 2<span class="required"> *</span></label>
-                                <input type="password" name="ex_password" class="form-control"></input>
                             </div>
                         </div>
                     </div>

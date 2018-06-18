@@ -43,11 +43,26 @@
                 ><i class='fa fa-upload'></i> Tải lên</a>
 	    </div>
         <div class="form-group col-sm-12">
+            <label for="title">Loại nội dung <span class="required"> *</span></label>
+            <select name="type" class="has-custom-select custom-input" id="disabled">
+                <option value="-1">Chọn loại nội dung</option>
+                <option value="1" {{ !empty($new) && $new->type == 1 ? "selected='selected'" : '' }} >Ảnh Slider trang chủ</option>
+                <option value="2" {{ !empty($new) && $new->type == 2 ? "selected='selected'" : '' }} >Giới thiệu</option>
+                <option value="1" {{ !empty($new) && $new->type == 1 ? "selected='selected'" : '' }} >Ảnh Slider trang chủ</option>
+                <option value="1" {{ !empty($new) && $new->type == 1 ? "selected='selected'" : '' }} >Ảnh Slider trang chủ</option>
+                <option value="1" {{ !empty($new) && $new->type == 1 ? "selected='selected'" : '' }} >Ảnh Slider trang chủ</option>
+            </select>
+        </div>
+        <div class="form-group col-sm-12">
             <label for="title">Tiêu đề <span class="required"> *</span></label>
             {{ Form::text('title', !empty($new) ? $new->title : null, array('class' => 'form-control')) }}
         </div>
         <div class="form-group col-sm-12">
-            <label for="content">Nội dung <span class="required"> *</span></label>
+            <label for="summary">Nội dung tóm tắt <span class="required"> *</span></label>
+            {{ Form::textarea('summary', !empty($new) ? $new->summary : null, array('class' => 'form-control', 'id' => 'create-summary-vi', 'rows' => '5')) }}
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="content">Nội dung chi tiết <span class="required"> *</span></label>
             {{ Form::textarea('content', !empty($new) ? $new->content : null, array('class' => 'form-control ckeditor', 'id' => 'create-content-vi')) }}
         </div>
 	    <div class="clear"></div>

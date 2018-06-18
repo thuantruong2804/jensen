@@ -21,7 +21,7 @@
                 </div>
                 
                 {{ Form::open(array(
-                    'url' => URL::to('/admin/account/edit/'.$account->ID),
+                    'url' => URL::to('/admin/account/edit/'.$account->id),
                     'id' => 'form-account-edit',
                     'class' => '',
                     'method' => 'post',
@@ -31,17 +31,12 @@
                     <div class="content-form">
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <input type="hidden" name="admin_level" class="form-control" value="{{ $account->AdminLevel }}"></input>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 form-group">
                                 <label>Tên tài khoản <span class="required"> *</span></label>
-                                <input type="text" name="username" class="form-control" style="text-transform: lowercase;" value="{{ $account->UserName }}"></input>
+                                <input type="text" name="username" class="form-control" style="text-transform: lowercase;" value="{{ $account->username }}"></input>
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Email <span class="required"> *</span></label>
-                                <input type="text" name="email" class="form-control"  value="{{ $account->Email }}"></input>
+                                <input type="text" name="email" class="form-control"  value="{{ $account->email }}"></input>
                             </div>
                         </div>
                     </div>

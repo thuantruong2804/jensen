@@ -1,5 +1,5 @@
 @section('title')
-    Quản lý tin tức
+    Quản lý nội dung
 @stop
 
 @section('style')
@@ -12,11 +12,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-7 col-md-6">
                         <p class="page-title"><i class="fa fa-table"></i> 
-                            <span> Danh sách tin tức</span>
+                            <span> Danh sách thông tin</span>
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6">
-                        <a href="{{ URL::to('admin/new/create') }}" class="btn btn-pink pull-right btn-create"><i class="fa fa-plus"></i> Tạo tin tức</a>
+                        <a href="{{ URL::to('admin/new/create') }}" class="btn btn-pink pull-right btn-create"><i class="fa fa-plus"></i> Tạo nội dung</a>
                     </div>
                 </div>
                 <div class="search-box">
