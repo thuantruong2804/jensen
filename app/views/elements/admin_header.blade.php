@@ -1,7 +1,7 @@
 <header id="header">
     <div id="logo-group">
         <span id="logo"> 
-            <img src="{{Asset('assets/img/logo.png')}}" alt="SmartAdmin"> 
+            <img src="{{Asset('assets/frontend/images/logo.png')}}" alt="SmartAdmin">
         </span>
     </div>
 

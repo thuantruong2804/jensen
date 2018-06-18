@@ -31,7 +31,7 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
         <!-- Google map -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiFdr5Z0WRIXKUOqoRRvzRQ5SkzhkUVjk"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2ZxmP3HXu8QpczpqmameMvRh0dOskJX0&language=vi"></script>
     </head>
     <body class="">
         @include('elements/app_header')

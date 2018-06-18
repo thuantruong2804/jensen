@@ -6,8 +6,8 @@
             @show 
         </title>
         <meta charset="utf-8">
-        <meta name="description" content="Quản trị game GTA">
-        <meta name="author" content="VNPT EPAY">
+        <meta name="description" content="Quản trị website Jensen">
+        <meta name="author" content="IDS-VietNam">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <!-- Basic Styles -->
@@ -22,8 +22,8 @@
         {{ HTML::style('assets/css/style.css') }}
         
         <!-- FAVICONS -->
-        <link rel="shortcut icon" href="{{Asset('assets/img/favicon/favicon.png')}}" type="image/x-icon">
-        <link rel="icon" href="{{Asset('assets/img/favicon/favicon.png')}}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{Asset('assets/frontend/images/favicon.png')}}" type="image/x-icon">
+        <link rel="icon" href="{{Asset('assets/frontend/images/favicon.png')}}" type="image/x-icon">
 
         <script type="text/javascript"> 
             timeOutNumber = 4000; //in ms

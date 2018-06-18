@@ -12,10 +12,10 @@
                         <div class="vert-wrap container">
                             <div class="vert">
                                 <div class="container">
-                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Creating
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">InSync® Glaze
                                         <br>Beautiful Smiles</div>
-                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Helping Thousands of People to Get Perfect Smile</div>
-                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>KNOW MORE</span><i class="icon-right-arrow"></i></a></div>
+                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Tạo sức sống tự nhiên và hiệu ứng màu sắc, đơn giản và đẹp mắt</div>
+                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -27,10 +27,10 @@
                         <div class="vert-wrap container">
                             <div class="vert">
                                 <div class="container">
-                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">We Provide
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Imagine® Zirconia
                                         <br>Full Dental Care!</div>
-                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Your pathway to a bright new smile</div>
-                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>KNOW MORE</span><i class="icon-right-arrow"></i></a></div>
+                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Đạt được độ mờ vô song với độ bền và độ bền cao</div>
+                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
                                 </div>
                             </div>
                         </div>
@@ -90,10 +90,10 @@
 
     <!--section why choose us-->
     <div class="section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="title-wrap text-center">
                 <div class="h-sub">Thấy sự khác biệt</div>
-                <h2 class="h1">Tại sao chọn chúng tôi?</h2>
+                <h2 class="h2">Tại sao chọn chúng tôi?</h2>
                 <div class="h-decor"></div>
             </div>
             <div class="row js-icn-carousel icn-carousel flex-column flex-sm-row text-center text-sm-left" data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}]}'>
@@ -111,7 +111,7 @@
                         <div class="icn-text-circle"><i class="icon-team"></i></div>
                         <div>
                             <h5 class="icn-text-title">Nhóm nha khoa cam kết</h5>
-                            <p>Đội ngũ nha khoa xuất sắc của chúng tôi rất thân thiện, chu đáo và có nhiều năm kinh nghiệm làm các nhà lâm sàng được thành lập.</p>
+                            <p>Đội ngũ nha khoa xuất sắc của chúng tôi rất thân thiện, chu đáo và có nhiều năm kinh nghiệm làm các nhà lâm sàng được thành lập. Đội ngũ nha khoa xuất sắc của chúng tôi rất thân thiện, chu đáo và có nhiều năm kinh nghiệm làm các nhà lâm sàng được thành lập</p>
                         </div>
                     </div>
                 </div>
@@ -144,21 +144,21 @@
                 <div class="col-sm-7 col-lg-6 mt-2 mt-lg-0 order-1 order-sm-0">
                     <div class="reviews-wrap ml-auto d-flex flex-column justify-content-center">
                         <div class="title-wrap text-center text-md-right px-2 px-md-0">
-                            <h2 class="h1">Patient Testimonials</h2>
+                            <h2 class="h2">Nhận xét của khách hàng</h2>
                             <div class="h-decor"></div>
                         </div>
                         <div class="js-reviews-carousel reviews-carousel text-center text-md-right">
                             <div class="review">
-                                <p class="review-text">I Am very impressed with you all as well as being highly proficient is absolutely adorable. I feel so relaxed in her capable hands and hope to be her patient for a very long time! You are a fantastic team and I feel very privileged to come to you all!!!</p>
-                                <p><span class="review-author">Wilmer Stevenson,</span> <span class="review-author-position">Creative manager</span></p>
+                                <p class="review-text">Đội ngũ kỹ thuật Jensen Dental không những có tay nghề cao, được đào tạo kiến thức chuyên môn sâu về răng – hàm – mặt, mà còn luôn rất có tâm trong nghề, luôn tư vấn cho bệnh nhân rất tận tình, chia sẻ đầy đủ thông tin và phương án điều trị tối ưu nhất cho bệnh nhân !!!</p>
+                                <p><span class="review-author">Phạm Hương,</span> <span class="review-author-position">Giám đốc công ty tư nhân</span></p>
                             </div>
                             <div class="review">
-                                <p class="review-text">I Am very impressed with you all as well as being highly proficient is absolutely adorable. I feel so relaxed in her capable hands and hope to be her patient for a very long time! You are a fantastic team and I feel very privileged to come to you all!!!</p>
-                                <p><span class="review-author">Wilmer Stevenson,</span> <span class="review-author-position">Creative manager</span></p>
+                                <p class="review-text">Đội ngũ kỹ thuật Jensen Dental không những có tay nghề cao, được đào tạo kiến thức chuyên môn sâu về răng – hàm – mặt, mà còn luôn rất có tâm trong nghề, luôn tư vấn cho bệnh nhân rất tận tình, chia sẻ đầy đủ thông tin và phương án điều trị tối ưu nhất cho bệnh nhân !!!</p>
+                                <p><span class="review-author">Thanh Nga,</span> <span class="review-author-position">Quản lý sản phẩm</span></p>
                             </div>
                             <div class="review">
-                                <p class="review-text">I Am very impressed with you all as well as being highly proficient is absolutely adorable. I feel so relaxed in her capable hands and hope to be her patient for a very long time! You are a fantastic team and I feel very privileged to come to you all!!!</p>
-                                <p><span class="review-author">Wilmer Stevenson,</span> <span class="review-author-position">Creative manager</span></p>
+                                <p class="review-text">Đội ngũ kỹ thuật Jensen Dental không những có tay nghề cao, được đào tạo kiến thức chuyên môn sâu về răng – hàm – mặt, mà còn luôn rất có tâm trong nghề, luôn tư vấn cho bệnh nhân rất tận tình, chia sẻ đầy đủ thông tin và phương án điều trị tối ưu nhất cho bệnh nhân !!!</p>
+                                <p><span class="review-author">Phạm Vũ,</span> <span class="review-author-position">Quản lý sản phẩm</span></p>
                             </div>
                         </div>
                     </div>
@@ -176,36 +176,36 @@
             <div class="row no-gutters">
                 <div class="col-xl-6 banner-left bg-full" style="background-image: url(assets/frontend/images/banner-left.jpg)">
                     <div class="banner-left-caption">
-                        <div class="banner-left-text1">Get Expert Dental Care</div>
+                        <div class="banner-left-text1">Giải đáp thắc mắc khách hàng</div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="faq-wrap">
                         <div class="d-flex flex-column flex-md-row position-relative px-15 px-lg-0 text-center text-md-left">
                             <div class="title-wrap">
-                                <h2 class="h1">Patient Information</h2>
+                                <h2 class="h2">Câu hỏi thường gặp</h2>
                                 <div class="h-decor"></div>
                             </div>
                             <div class="nav nav-pills mt-2 mt-md-0" role="tablist">
-                                <a class="nav-link active" data-toggle="pill" href="#tab-A" role="tab">General</a>
-                                <a class="nav-link" data-toggle="pill" href="#tab-B" role="tab">Urgent</a>
+                                <a class="nav-link active" data-toggle="pill" href="#tab-A" role="tab">Chung</a>
+                                <a class="nav-link" data-toggle="pill" href="#tab-B" role="tab">Khẩn cấp</a>
                             </div>
                         </div>
                         <div id="tab-content" class="tab-content mt-2 mt-lg-4">
                             <div id="tab-A" class="tab-pane fade show active" role="tabpanel">
                                 <div id="faqAccordion1" class="faq-accordion" data-children=".faq-item">
                                     <div class="faq-item">
-                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem1" aria-expanded="true"><span>1.</span><span>How often 1 should I visit my dentist?</span></a>
+                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem1" aria-expanded="true"><span>1.</span><span>Tôi nên đi khám nha sĩ bao lâu một lần?</span></a>
                                         <div id="faqItem1" class="collapse show faq-item-content" role="tabpanel">
                                             <div>
                                                 <p>
-                                                    Everyone’s needs are different, so have a chat to your dentist about how often you need to have your teeth checked by them based on the condition of your mouth, teeth and gums. It’s recommended that children see their dentist at least once a year.
+                                                    Mọi nhu cầu của mọi người đều khác nhau, vì vậy hãy trò chuyện với nha sĩ của bạn về việc bạn cần kiểm tra răng thường xuyên như thế nào dựa trên tình trạng miệng, răng và nướu răng của bạn. Chúng tôi khuyên trẻ em nên đi nha sĩ ít nhất mỗi năm một lần.
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="faq-item">
-                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem2" aria-expanded="false" class="collapsed"><span>2.</span><span>Why are regular dental assessments so important?</span></a>
+                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem2" aria-expanded="false" class="collapsed"><span>2.</span><span>Đánh giá nha khoa thường xuyên?</span></a>
                                         <div id="faqItem2" class="collapse faq-item-content" role="tabpanel">
                                             <div>
                                                 <p>
@@ -215,7 +215,7 @@
                                         </div>
                                     </div>
                                     <div class="faq-item">
-                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem3" aria-expanded="false" class="collapsed"><span>3.</span><span>How do I know if my teeth are healthy?</span></a>
+                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem3" aria-expanded="false" class="collapsed"><span>3.</span><span>Răng của tôi có khỏe mạnh không?</span></a>
                                         <div id="faqItem3" class="collapse faq-item-content" role="tabpanel">
                                             <div>
                                                 <p>
@@ -225,7 +225,7 @@
                                         </div>
                                     </div>
                                     <div class="faq-item">
-                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem4" aria-expanded="false" class="collapsed"><span>4.</span><span>How can I improve my oral hygiene?</span></a>
+                                        <a data-toggle="collapse" data-parent="#faqAccordion1" href="#faqItem4" aria-expanded="false" class="collapsed"><span>4.</span><span>Cải thiện vệ sinh răng miệng của mình?</span></a>
                                         <div id="faqItem4" class="collapse faq-item-content" role="tabpanel">
                                             <div>
                                                 <p>
@@ -292,8 +292,8 @@
     <div class="section">
         <div class="container p-0">
             <div class="title-wrap text-center">
-                <div class="h-sub">Our clients stories</div>
-                <h2 class="h1">Smile Gallery</h2>
+                <div class="h-sub">Câu chuyện của khách hàng</div>
+                <h2 class="h2">Thư viện ảnh</h2>
                 <div class="h-decor"></div>
             </div>
             <div class="row no-gutters mx-lg-15">
@@ -310,9 +310,6 @@
                 <div class="col d-none d-sm-flex"><span class="gallery-popover-link" data-full="images/content/gallery/smile-gallery-hover-09.jpg"><img src="{{Asset('assets/frontend/images/gallery/smile-gallery-09.jpg')}}" alt="" class="img-fluid"></span></div>
                 <div class="col d-none d-sm-flex"><span class="gallery-popover-link" data-full="images/content/gallery/smile-gallery-hover-10.jpg"><img src="{{Asset('assets/frontend/images/gallery/smile-gallery-10.jpg')}}" alt="" class="img-fluid"></span></div>
             </div>
-            <div class="text-center mt-5">
-                <a href="gallery.html" class="btn btn-sm btn-hover-fill">View more smiles</a>
-            </div>
         </div>
     </div>
     <!--//section clients gallery-->
@@ -321,15 +318,15 @@
         <div class="container-fluid px-0">
             <div class="banner-call">
                 <div class="row no-gutters">
-                    <div class="col-sm-6 col-lg-4 order-2 order-sm-1 mt-3 mt-md-0 text-center text-md-right">
+                    <div class="col-sm-2 col-lg-2 order-2 order-sm-1 mt-3 mt-md-0 text-center text-md-right">
                         <!--<img src="{{Asset('assets/frontend/images/banner-callus.jpg')}}" alt="" class="shift-left" >-->
                     </div>
-                    <div class="col-sm-6 col-lg-8 d-flex align-items-center order-1 order-sm-2">
+                    <div class="col-sm-8 col-lg-8 d-flex align-items-center order-1 order-sm-2">
                         <div class="text-center">
-                            <h2>Looking for a Certified Dentist?</h2>
-                            <h6>We're always accepting new patients!</h6>
+                            <h2>Bạn đang tìm kiếm Giải Pháp Nha Khoa Toàn Diện?</h2>
+                            <h6>Hãy đến phòng khám uy tín tại Việt Nam để được tư vấn thêm!</h6>
                             <div class="mt-2 mt-lg-4">
-                                <a href="#" class="btn btn-lg icn-left"><i class="icon-telephone"></i>1-800-267-0000<i class="icon-telephone"></i></a>
+                                <a href="#" class="btn btn-lg icn-left"><i class="icon-telephone"></i>+84 24 2268 8080<i class="icon-telephone"></i></a>
                             </div>
                         </div>
                     </div>
@@ -343,7 +340,7 @@
             background: url({{Asset('assets/frontend/images/banner-callus.jpg')}}) no-repeat center top;
             background-attachment: scroll;
             background-size: auto auto;
-            height: 260px;
+            height: 360px;
             padding-top: 50px;
         }
     </style>

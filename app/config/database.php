@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '45.125.239.96:3306',
-			'database'  => 'gvc_launcher',
-			'username'  => 'gvc_data',
-			'password'  => 'ccFLKTrVYtPU9HKb',
+			'host'      => 'localhost',
+			'database'  => 'jensen',
+			'username'  => 'root',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

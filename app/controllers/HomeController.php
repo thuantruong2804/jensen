@@ -20,13 +20,13 @@ class HomeController extends BaseController {
             $validator = $this->account->validateCredentials($input);
             if ($validator->passes()) {
                 $account = $this->account->checkLogin($input['username'], $input['password']);
-                if ($account instanceof Account) {
+                if ($account) {
                     if (isset($input['remember']) && $input['remember'] == 1) {
                         setcookie('username', $input['username'], time()+3600*24*30);
                         setcookie('password', $input['password'], time()+3600*24*30);
                     }
-                    Session::put('auth', $account->ID);
-                    return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => route('admin.account')));
+                    Session::put('auth', $account->id);
+                    return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => route('admin.new')));
                 } else {
                     return Response::json(array('status' => 0, 'code' => 'corect',  'message' => 'Tài khoản hoặc mật khẩu không đúng'));
                 }
@@ -79,97 +79,25 @@ class HomeController extends BaseController {
     }
 
     /**
-     * show home
+     * show lab
      * @author Thuan Truong
      */
-    public function dailydiscount() {
-        DB::table('zz_discounts')->whereRaw('Discount_Exprire_Date < ? and Discount_Status = 1', [date('Y-m-d')])->update(array('Discount_Status' => 0));
-        DB::table('zz_vouchers')->whereRaw('Voucher_Expire_Date < ? and Voucher_Status = 0', [date('Y-m-d')])->update(array('Voucher_Status' => 1));
-        return Response::json(array('status' => 1));
-    }
-
-    /**
-     * show home
-     * @author Thuan Truong
-     */
-    public function serverinfo() {
-        include('infosv.php');
-        $serverIP = "112.213.84.173";
-        $serverPort = 7777;
-
-        try
-        {
-            $rQuery = new QueryServer( $serverIP, $serverPort );
-
-            $aInformation = $rQuery->GetInfo( );
-            $aServerRules = $rQuery->GetRules( );
-            $aBasicPlayer = $rQuery->GetPlayers( );
-            $aTotalPlayers = $rQuery->GetDetailedPlayers( );
-
-            $rQuery->Close( );
-        }
-        catch (QueryServerException $pError)
-        {
-
-        }
-
-        $this->layout = View::make('layouts.application');
-        if(isset($aInformation) && is_array($aInformation)){
-            $view = View::make('home.infosv')->with(array(
-                'aInformation' => $aInformation,
-                'aServerRules' => $aServerRules,
-                'aBasicPlayer' => $aBasicPlayer,
-                'aTotalPlayers' => $aTotalPlayers
-            ));
-        } else {
-            $view = View::make('home.infosv')->with(array());
-        }
-        $this->layout->content = $view;
-    }
-
-    /**
-     * show home
-     * @author Thuan Truong
-     */
-    public function analytic() {
+    public function lab() {
         $input = array_map('trim', Input::all());
-        $query = Statics::query();
-        $statics = null;
 
-        $query->select('*');
-        if (!empty($input)) {
-            if (!empty($input['start_date'])) {
-                $currentDate = DateTime::createFromFormat('d-m-Y', $input['start_date'])->format('Y-m-d');
-                $query->where('Date', '>=', $currentDate);
-            }
-            if (!empty($input['end_date'])) {
-                $currentDate = DateTime::createFromFormat('d-m-Y', $input['end_date'])->format('Y-m-d');
-                $query->where('Date', '<=', $currentDate);
-            }
-
-        } else {
-            $monthAgoDate = date('Y-m-d');
-            $query->where('Date', '>=', date("Y-m-d", strtotime("-30 days")));
-        }
-        $query->orderBy('Date', 'desc');
-        $query->offset(0)->limit(15);
-        $statics = $query->orderBy('Date', 'asc')->get();
-
-
-        $countMale = Character::whereRaw('Gender = 1')->count();
-        $countFeMale = Character::whereRaw('Gender = 2')->count();
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', 'Cộng đồng Grand Theft Auto - San Andreas tại Việt Nam. Máy chủ chính thức với IP: GVC.WTF:7777. Bạn sẽ được trải nghiệm qua tất cả nhân vật trong cuộc sống thực tế để có thể phô diễn khả năng của chúng ta cho mọi người xem. Tất cả mọi thứ đã có trong GvC , bạn hãy vào để giao lưu , làm quen với mọi người nào !');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
 
         $this->layout = View::make('layouts.application');
-        $view = View::make('home.static')->with(array(
-            'statics' => $statics,
-            'male' => $countMale,
-            'female' => $countFeMale,
-            'input' => $input
+        $view = View::make('home.lab')->with(array(
+
         ));
         $this->layout->content = $view;
     }
-    
-    
+
+
     /**
      * Upload image for CKeditor
      * @author Duc Nguyen

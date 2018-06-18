@@ -1,7 +1,7 @@
 <?php
 class News extends Eloquent {
     
-	protected $table = 'zz_news';
+	protected $table = 'news';
     protected $primaryKey = 'new_id';
     
 	/**

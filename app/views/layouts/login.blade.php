@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us" id="extr-page">
     <head>
-        <title> Quản trị hệ thống game </title>
+        <title> Quản trị website Jensen </title>
         <meta charset="utf-8">
-        <meta name="description" content="Quản trị hệ thống game">
-        <meta name="author" content="VNPT EPAY">
+        <meta name="description" content="Quản trị website Jensen">
+        <meta name="author" content="IDS-VietNam">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <!-- Basic Styles -->
@@ -16,24 +16,21 @@
         {{ HTML::style('assets/css/style.css') }}
         
         <!-- FAVICONS -->
-        <link rel="shortcut icon" href="{{Asset('assets/img/favicon/favicon.png')}}" type="image/x-icon">
-        <link rel="icon" href="{{Asset('assets/img/favicon/favicon.png')}}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{Asset('assets/frontend/images/favicon.png')}}" type="image/x-icon">
+        <link rel="icon" href="{{Asset('assets/frontend/images/favicon.png')}}" type="image/x-icon">
 
-        <!-- #GOOGLE FONT -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
     </head>
     
-    <body class="animated fadeInDown">
-        <div id="main" role="main">
+    <body class="animated fadeInDown" style="background-color: #1e76bd !important;">
+        <div id="main" role="main" style="background-color: #1e76bd !important;">
             <div style="left: 0px; top: 0px; bottom: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; position: fixed;" class="backstretch">
-                <img src="{{Asset('assets/img/background2.jpg')}}" style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 100%; height: 100%; left: 0px;">
             </div>
             
             <div id="content" class="container" style="height: 720px;">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-md-offset-3 col-lg-offset-4">
                         <div style="text-align: center; margin: 70px 0px 30px 0px; ">
-                            <img src="{{Asset('assets/img/logo.png')}}" alt="SmartAdmin" style="max-width: 150px;">
+                            <img src="{{Asset('assets/frontend/images/logo.png')}}" alt="SmartAdmin" style="max-width: 150px;">
                         </div>
                         <div class=" no-padding" style="background: transparent url('../assets/img/bg-white-lock.png') repeat scroll 0% 0%;width: 375px;margin: 0px auto;padding: 20px 30px 15px;border-radius: 7px;">
                             {{
@@ -121,7 +118,7 @@
                                 }
                             </style>
                         </div>
-                        <p style="color: #fff; text-align: center;">GvC Group © 2016. Tất cả quyền được bảo lưu. </p>
+                        <p style="color: #fff; text-align: center;">Jensen Dental © 2018. Tất cả quyền được bảo lưu. </p>
                     </div>
                 </div>
             </div>

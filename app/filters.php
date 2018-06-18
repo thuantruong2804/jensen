@@ -36,26 +36,6 @@ App::after(function($request, $response)
 Route::filter('adminFilter', function(){
     if (!Session::has('auth')) {
         return Redirect::to('admin/login');
-    } else {
-        $currentUser = BaseController::getAccountInfo();
-        if ($currentUser->AdminLevel != 99999 && $currentUser->AdminLevel != 1338 && $currentUser->AdminLevel != 1337 && $currentUser->AdminLevel != 4) {
-            Session::flash('f_error', 'Không đủ quyền truy cập');
-            return Redirect::to('/');
-        }
-    }
-    
-});
-
-Route::filter('accountFilter', function(){
-    if (!Session::has('auth')) {
-        return Redirect::to('/dang-nhap');
-    }
-});
-
-Route::filter('passQuestionFilter', function(){
-    $passQuestion = isset($_COOKIE['pass_question']) ? $_COOKIE['pass_question'] : '';
-    if (!$passQuestion) {
-        return Redirect::to('/cau-hoi-dang-ky');
     }
 });
 

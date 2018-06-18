@@ -1,7 +1,7 @@
 <?php
 class Media extends Eloquent {
 
-	protected $table = 'zz_medias';
+	protected $table = 'medias';
     protected $primaryKey = 'id';
     
     /**

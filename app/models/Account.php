@@ -3,7 +3,7 @@ use Illuminate\Auth\UserInterface;
 class Account extends Eloquent implements UserInterface {
     
     protected $table = 'accounts';
-    protected $primaryKey = 'ID';
+    protected $primaryKey = 'id';
     
     public function getPresenter() {}
     public function __construct(array $attributes = array()) {
@@ -22,10 +22,10 @@ class Account extends Eloquent implements UserInterface {
      * @author Thuan Truong
      */
     public function checkLogin($username, $password){
-        $account = Account::whereRaw("UserName = ? and Disabled = ? and AdminLevel in(99999, 1338, 1337, 4)", array($username, 0))->first();
+        $account = Account::whereRaw("username = ? and status = ?", array($username, 1))->first();
         
         if(!empty($account)){
-            if(strtoupper(hash('whirlpool', $password)) == $account->Password){
+            if (Hash::check($password, $account->password)) {
                 return $account;
             } else {
                 return false;

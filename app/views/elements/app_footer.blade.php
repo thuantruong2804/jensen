@@ -1,28 +1,69 @@
 <!--footer-->
 <div class="footer mt-0">
-    <div class="container">
-        <div class="row py-1 py-md-4 px-1 px-sm-2 px-lg-0">
+    <div class="container-fluid">
+        <div class="row py-1 py-md-4 px-1 px-sm-2 px-lg-0 bg-grey" style="background-color: #fff;">
+            <div class="col-lg-2 footer-col1 text-center text-md-left">
+                <h4 class="h4">Danh mục chính</h4>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="{{ URL::to('/') }}">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Lab được ủy quyền</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Tra cứu bảo hành</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Thư viện</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 footer-col1 text-center text-md-left">
+                <h4 class="h4">Các sản phẩm</h4>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="{{ URL::to('/') }}">Jensen Zirconia</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Stain and Glaze Insync</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Sứ Insync</a>
+                    </li>
+                </ul>
+            </div>
             <div class="col-lg-4 footer-col1 text-center text-md-left">
-                <div class="row flex-column flex-md-row flex-lg-column">
-                    <div class="col-md col-lg-auto">
-                        <div class="footer-logo">
-                            <img src="{{Asset('assets/frontend/images/footer-logo.png')}}" alt="" class="img-fluid">
-                        </div>
-                        <div class="footer-text mt-1">
-                            <p>I am writing to you to say how much I appreciate your skills as a caring and gentle dentist. </p>
-                            <b>- John L. Sand</b>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/" target="blank" class="hovicon"><i class="icon-facebook-logo"></i></a>
-                            <a href="https://www.twitter.com/" target="blank" class="hovicon"><i class="icon-twitter-logo"></i></a>
-                            <a href="https://plus.google.com/" target="blank" class="hovicon"><i class="icon-google-logo"></i></a>
-                            <a href="https://www.instagram.com/" target="blank" class="hovicon"><i class="icon-instagram"></i></a>
-                        </div>
-                    </div>
+                <div class="video-wrap embed-responsive embed-responsive-16by9" style="max-height: 200px;">
+                    <iframe src="https://www.youtube.com/embed/h1dU4SM2hE8?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;start=70" allowfullscreen></iframe>
                 </div>
             </div>
+            <div class="col-lg-2 footer-col1 text-center text-md-left">
+                <h4 class="h4">Tài liệu tải về</h4>
+                <ul class="footer-menu">
+                    <li>
+                        <a href="{{ URL::to('/') }}">Tải liệu tiếng việt</a>
+                    </li>
+                    <li>
+                        <a href="{{ URL::to('/') }}">Tài liệu tiếng anh </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 footer-col1 text-center text-md-left">
+                <a href="{{ URL::to('/') }}"><img src="{{Asset('assets/frontend/images/9.png')}}" style="max-height: 200px;"></a>
+            </div>
+            <style>
+                ul.footer-menu {
+                    padding-left: 15px;
+                }
+                ul.footer-menu li {
+                    list-style: none;
+                }
+            </style>
+            <!--
             <div class="col-sm-6 col-lg-4">
                 <h3 class="text-center text-md-left">Blog Posts</h3>
                 <div class="footer-post d-flex">
@@ -53,14 +94,15 @@
                     <li><i class="icon-black-envelope"></i><a href="mailto:info@dentco.net">info@dentco.net</a></li>
                 </ul>
             </div>
+            -->
         </div>
     </div>
     <div class="footer-bottom">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row text-center text-md-left">
-                <div class="col-sm">Copyright © 2018 <a href="#">DentCo</a><span class="d-none d-sm-inline">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-                    <br class="d-sm-none"><a href="#">Privacy Policy</a></div>
-                <div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">For emergency cases&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>1-800-267-0000</b></div>
+                <div class="col-sm">Copyright © 2018 <a href="#">Jensen Dental</a><span class="d-none d-sm-inline">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+                    <br class="d-sm-none"><a href="#"> Đã đăng ký bản quyền</a></div>
+                <div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">Trường hợp khẩn cấp&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>+84 8 2264 6868</b></div>
             </div>
         </div>
     </div>

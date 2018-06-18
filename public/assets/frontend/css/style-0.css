@@ -329,7 +329,9 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  -font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: inherit; }
@@ -6199,7 +6201,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 h1,
 .h1 {
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1em;
   margin-bottom: 6px; }
   @media (max-width: 1023px) {
@@ -6213,7 +6216,8 @@ h1,
       line-height: 36px; } }
 
 h2 {
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1em;
   margin-bottom: 6px; }
   @media (max-width: 1023px) {
@@ -6224,7 +6228,8 @@ h2 {
       font-size: 32px; } }
 
 h3 {
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1em;
   margin-bottom: 25px; }
   @media (max-width: 1023px) {
@@ -6239,7 +6244,8 @@ h3 {
     width: 45px; }
 
 h4 {
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.55em;
   margin-bottom: 18px; }
   @media (max-width: 1023px) {
@@ -6250,7 +6256,8 @@ h4 {
       font-size: 18px; } }
 
 h5 {
-  font-family: "Playfair Display", serif;
+  -font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1em;
   margin-bottom: 25px; }
   @media (max-width: 1023px) {

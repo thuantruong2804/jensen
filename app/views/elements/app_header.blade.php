@@ -31,7 +31,7 @@
                     <span class="icon-menu"></span>
                 </button>
                 <div class="col-lg-auto col-lg-3 d-flex align-items-lg-center">
-                    <a href="index.html" class="header-logo"><img src="{{Asset('assets/frontend/images/logo.png')}}" alt="" class="img-fluid"></a>
+                    <a href="{{ URL::to('/') }}" class="header-logo"><img src="{{Asset('assets/frontend/images/logo.png')}}" alt="" class="img-fluid"></a>
                 </div>
                 <div class="col-lg ml-auto">
                     <div class="header-nav js-header-nav">
@@ -42,7 +42,7 @@
                                         <a class="nav-link" href="about.html">Giới thiệu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Lab được ủy quyền</a>
+                                        <a href="{{ URL::to('/lab-duoc-uy-quyen') }}" class="nav-link">Lab được ủy quyền</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Tra cứu bảo hành</a>
