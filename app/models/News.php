@@ -57,6 +57,9 @@ class News extends Eloquent {
     public function validate($input) {
         $rules = array(
             'title' => 'required|max:250',
+            'summary' => 'required|max:2000',
+            'keyword' => 'required|max:255',
+            'type'  => 'required',
             'content' => 'required|max:30000',
             'file' => 'required'
         );
@@ -78,11 +81,13 @@ class News extends Eloquent {
         }
              
         $new = new News; // create new with lang = en
-        $new->user_id = $account->ID;
+        $new->user_id = $account->id;
         $new->slug = BaseController::sanitizeStringForUrl($input['title']);
         $new->title = $input['title'];
-        $new->summary = $input['title'];
-        $new->content = $input['content'];  
+        $new->summary = $input['summary'];
+        $new->keyword = $input['keyword'];
+        $new->content = $input['content'];
+        $new->type = $input['type'];
         $new->media_id = $media;
         $new->status = 1;
         $new->save();
@@ -107,8 +112,10 @@ class News extends Eloquent {
         $new->user_id = $account->ID;
         $new->slug = BaseController::sanitizeStringForUrl($input['title']);
         $new->title = $input['title'];
-        $new->summary = $input['title'];
-        $new->content = $input['content'];  
+        $new->summary = $input['summary'];
+        $new->keyword = $input['keyword'];
+        $new->content = $input['content'];
+        $new->type = $input['type'];
         $new->media_id = $media;
         $new->status = 1;
         $new->update();

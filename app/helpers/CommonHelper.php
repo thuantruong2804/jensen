@@ -19,37 +19,27 @@ class CommonHelper {
             $str_err = str_replace('contact', 'Liên hệ', $str_err);
             
             // user
-            $str_err = str_replace('charactername', 'Tên nhân vật', $str_err);
             $str_err = str_replace('fullname', 'Tên đầy đủ', $str_err);
             $str_err = str_replace('email', 'Email', $str_err);
 
-            $str_err = str_replace('telco code', 'Loại thẻ', $str_err);
-            $str_err = str_replace('sale price', 'Giá khuyến mại', $str_err);
-            $str_err = str_replace('price', 'Giá gốc', $str_err);
             $str_err = str_replace('code', 'Mã', $str_err);
             $str_err = str_replace('name', 'Tên', $str_err);
             $str_err = str_replace('video', 'Video', $str_err);
-            $str_err = str_replace('num date', 'Số ngày', $str_err);
-            
+
             // charging
-            $str_err = str_replace('card serial', 'Mã serial', $str_err);
-            $str_err = str_replace('card pin', 'Mã thẻ cào', $str_err);
-            
-            $str_err = str_replace('forum profile link', 'Link profile forum', $str_err);
-            $str_err = str_replace('issue summary', 'Mô tả ngắn gọn', $str_err);
-            $str_err = str_replace('issue detail', 'Mô tả chi tiết', $str_err);
 
             $str_err = str_replace('birthday', 'Ngày sinh', $str_err);
             $str_err = str_replace('city', 'Quê quán', $str_err);
-            $str_err = str_replace('skin', 'Số', $str_err);
-            $str_err = str_replace('character introdue', 'Giới thiệu nhân vật', $str_err);
             $str_err = str_replace('term description', 'Chính sách', $str_err);
-            $str_err = str_replace('roleplay description', 'Quy định', $str_err);
             $str_err = str_replace('content', 'Nội dung', $str_err);
             $str_err = str_replace('percent', 'Chiết khấu', $str_err);
             $str_err = str_replace('message', 'Nội dung', $str_err);
             $str_err = str_replace('number', 'Số lượng', $str_err);
-            $str_err = str_replace('voucher', 'Mã khuyến mại', $str_err);
+            $str_err = str_replace('type', 'Loại nội dung', $str_err);
+            $str_err = str_replace('summary', 'Tóm tắt', $str_err);
+            $str_err = str_replace('address', 'Địa chỉ', $str_err);
+            $str_err = str_replace('lat', 'Vĩ độ', $str_err);
+            $str_err = str_replace('long', 'Kinh độ', $str_err);
 
             $messageArr[$key] = $str_err;
         }

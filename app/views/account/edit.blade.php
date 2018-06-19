@@ -11,7 +11,7 @@
             <div class="widget-body">
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-xs-12 col-sm-7 col-md-6">
-                        <p class="page-title"><i class="fa fa-plus-square"></i> 
+                        <p class="page-title"><i class="fa fa-plus-square"></i>
                             <span> Sửa tài khoản</span>
                         </p>
                     </div>
@@ -19,7 +19,7 @@
                         <a href="{{ URL::to('admin/account') }}" class="btn btn-pink pull-right"><i class="fa fa-chevron-left"></i> Danh sách tài khoản</a>
                     </div>
                 </div>
-                
+
                 {{ Form::open(array(
                     'url' => URL::to('/admin/account/edit/'.$account->id),
                     'id' => 'form-account-edit',
@@ -50,7 +50,7 @@
               </div>
         </article>
     </div>
-    
+
 @stop
 
 @section('scripts')

@@ -39,11 +39,11 @@ class NewController extends \BaseController {
             $validator = $this->news->validate($input);
             if($validator->passes()){
                 $this->news->createNew($input);
-                Session::flash('f_notice', 'Tạo mới tin tức thành công');            
+                Session::flash('f_notice', 'Tạo mới nội dung thành công');
                 return Response::json(array(
                     'status' => 1,
                     'redirect' => route('admin.new'),
-                    'message' => 'Tạo mới tin tức thành công'
+                    'message' => 'Tạo mới nội dung thành công'
                 ));
                 
             }else{
@@ -75,11 +75,11 @@ class NewController extends \BaseController {
             $validator = $this->news->validate($input);
             if($validator->passes()){
                 $this->news->updateNew($input, $id);
-                Session::flash('f_notice', 'Sửa tin tức thành công');            
+                Session::flash('f_notice', 'Sửa nội dung thành công');
                 return Response::json(array(
                     'status' => 1,
                     'redirect' => route('admin.new'),
-                    'message' => 'Sửa tin tức thành công'
+                    'message' => 'Sửa nội dung thành công'
                 ));
                 
             }else{

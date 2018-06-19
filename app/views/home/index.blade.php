@@ -6,36 +6,23 @@
                 <div class="inner-circles-loader"></div>
             </div>
             <div class="main-slider arrows-white arrows-bottom" id="mainSlider" data-slick='{"arrows": false, "dots": false}'>
-                <div class="slide">
-                    <div class="img--holder" data-animation="kenburns" data-bg="{{Asset('assets/frontend/images/slider/slide-02.jpg')}}"></div>
-                    <div class="slide-content center">
-                        <div class="vert-wrap container">
-                            <div class="vert">
-                                <div class="container">
-                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">InSync® Glaze
-                                        <br>Beautiful Smiles</div>
-                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Tạo sức sống tự nhiên và hiệu ứng màu sắc, đơn giản và đẹp mắt</div>
-                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
+                @foreach ($sliders as $slider)
+                    <?php $imageUrl = Media::find($slider->media_id); ?>
+                    <div class="slide">
+                        <div class="img--holder" data-animation="kenburns" data-bg="{{ $imageUrl->path.$imageUrl->original }}"></div>
+                        <div class="slide-content center">
+                            <div class="vert-wrap container">
+                                <div class="vert">
+                                    <div class="container">
+                                        <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">{{ $slider->title }}</div>
+                                        <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">{{ $slider->summary }}</div>
+                                        <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slide">
-                    <div class="img--holder" data-animation="kenburns" data-bg="{{Asset('assets/frontend/images/slider/slide-01.jpg')}}"></div>
-                    <div class="slide-content center">
-                        <div class="vert-wrap container">
-                            <div class="vert">
-                                <div class="container">
-                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Imagine® Zirconia
-                                        <br>Full Dental Care!</div>
-                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Đạt được độ mờ vô song với độ bền và độ bền cao</div>
-                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -49,11 +36,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="title-wrap text-center text-lg-left">
-                        <h2 class="h2"> Kỷ niệm 40 năm nha khoa</h2>
+                        <h2 class="h2">{{ $intro->title }}</h2>
                         <div class="h-decor"></div>
                     </div>
-                    <p class="p-lg">Jensen Dental tự hào thông báo 40 năm của mình là nhà cung cấp hàng đầu các sản phẩm, dịch vụ, hỗ trợ kỹ thuật và giáo dục chất lượng cho ngành công nghiệp nha khoa.</p>
-                    <p class="p-lg d-none d-lg-block">Là một thường hiệu hàng đầu trong nha khoa Nước Mỹ, Jensen Dental đã đưa ra các sản phẩm về nha khoa đã được nhiều phòng thí nghiệm nha khoa ưa thích và sử dụng. Trong đó Phôi Zirconia Jensen là một trong các sản phẩm được sử dụng nhiều nhất.</p>
+                    <p class="p-lg">{{ $intro->summary }}</p>
                     <div class="btn-wrap"><a href="service-page.html" class="btn"><i class="icon-right-arrow"></i><span>Tìm hiểu thêm</span><i class="icon-right-arrow"></i></a></div>
                 </div>
                 <div class="col-lg-6 mt-4 mt-lg-1">
