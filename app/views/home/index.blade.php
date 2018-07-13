@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-6 mt-4 mt-lg-1">
                     <div class="video-wrap embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.youtube.com/embed/h1dU4SM2hE8?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;start=70" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/VQEtGhC8i6w?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;start=70" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -161,8 +161,9 @@
         <div class="container-fluid px-0">
             <div class="row no-gutters">
                 <div class="col-xl-6 banner-left bg-full" style="background-image: url(assets/frontend/images/banner-left.jpg)">
-                    <div class="banner-left-caption">
-                        <div class="banner-left-text1">Giải đáp thắc mắc khách hàng</div>
+                    <div class="banner-center-caption">
+                        <div class="banner-center-text1" style="text-align: center; font-size: 38px;">Giải đáp thắc mắc khách hàng</div><br>
+                        <div class="banner-center-text1" style="text-align: center; font-size: 20px;">Gửi câu hỏi của bạn về hòm thư điện tử <span style="color: #2184d3; text-decoration: underline;">info@ids-vietnam.com</span> của chúng tôi để được giải đáp</div>
                     </div>
                 </div>
                 <div class="col-xl-6">
@@ -275,7 +276,7 @@
     <!--//section faq-->
 
     <!--section clients gallery-->
-    <div class="section">
+    <div class="section" style="margin-bottom: 50px;">
         <div class="container p-0">
             <div class="title-wrap text-center">
                 <div class="h-sub">Câu chuyện của khách hàng</div>
@@ -299,37 +300,70 @@
         </div>
     </div>
     <!--//section clients gallery-->
-    <!--section call us-->
-    <div class="section mt-5">
-        <div class="container-fluid px-0">
-            <div class="banner-call">
-                <div class="row no-gutters">
-                    <div class="col-sm-2 col-lg-2 order-2 order-sm-1 mt-3 mt-md-0 text-center text-md-right">
-                        <!--<img src="{{Asset('assets/frontend/images/banner-callus.jpg')}}" alt="" class="shift-left" >-->
-                    </div>
-                    <div class="col-sm-8 col-lg-8 d-flex align-items-center order-1 order-sm-2">
-                        <div class="text-center">
-                            <h2>Bạn đang tìm kiếm Giải Pháp Nha Khoa Toàn Diện?</h2>
-                            <h6>Hãy đến phòng khám uy tín tại Việt Nam để được tư vấn thêm!</h6>
-                            <div class="mt-2 mt-lg-4">
-                                <a href="#" class="btn btn-lg icn-left"><i class="icon-telephone"></i>+84 24 2268 8080<i class="icon-telephone"></i></a>
-                            </div>
+
+    <!--section-->
+    <div class="section">
+        <div class="container">
+            <div class="title-wrap text-center">
+                <div class="h-sub">Cập nhật thông tin mỗi ngày</div>
+                <h2 class="h2">Tin tức mới</h2>
+                <div class="h-decor"></div>
+            </div>
+            <div class="row col-equalH">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-photo">
+                            <a href="service-page.html"><img src="{{Asset('assets/frontend/images/services-01.jpg')}}" class="img-fluid" alt=""></a>
                         </div>
+                        <h5 class="service-card-name"><a href="service-page.html">Cosmetic Dentistry</a></h5>
+                        <p>Cosmetic dentistry is concerned with the appearance of teeth and the enhancement of a person's smile</p>
+                        <ul class="circle-list">
+                            <li><em>Orthodontics</em></li>
+                            <li><em>White Fillings</em></li>
+                            <li><em>Porcelain Veneers</em></li>
+                            <li><em>Teeth Whitening</em></li>
+                            <li><em>Inlays &amp; Onlays</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-photo">
+                            <a href="service-page.html"><img src="{{Asset('assets/frontend/images/services-02.jpg')}}" class="img-fluid" alt=""></a>
+                        </div>
+                        <h5 class="service-card-name"><a href="service-page.html">General Dentistry</a></h5>
+                        <p>General dentists provide services related to the general maintenance of oral hygiene and tooth health</p>
+                        <ul class="circle-list">
+                            <li><em>Root Canal Therapy</em></li>
+                            <li><em>Nervous Patients</em></li>
+                            <li><em>Extractions</em></li>
+                            <li><em>Jaw Joint Problems</em></li>
+                            <li><em>Pregnant Woman</em></li>
+                            <li><em>Snoring & Sleep Apnoea Solutions</em></li>
+                            <li><em>NHS Dentistry</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-photo">
+                            <a href="service-page.html"><img src="{{Asset('assets/frontend/images/services-03.jpg')}}" class="img-fluid" alt=""></a>
+                        </div>
+                        <h5 class="service-card-name"><a href="service-page.html">Children`s Dentistry</a></h5>
+                        <p>Your child will receive state-of-the-art oral care from our team. </p>
+                        <ul class="circle-list">
+                            <li><em>Dental Emergencies</em></li>
+                            <li><em>Exams & Dental Cleanings</em></li>
+                            <li><em>Dental Sedation</em></li>
+                            <li><em>Digital X-Rays</em></li>
+                            <li><em>Fluoride Treatments</em></li>
+                            <li><em>Dental Restorations</em></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <style>
-        .banner-call {
-            background-attachment: fixed !important;
-            background: url({{Asset('assets/frontend/images/banner-callus.jpg')}}) no-repeat center top;
-            background-attachment: scroll;
-            background-size: auto auto;
-            height: 360px;
-            padding-top: 50px;
-        }
-    </style>
-    <!--section call us-->
+    <!--//section-->
 @stop
 

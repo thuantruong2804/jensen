@@ -192,4 +192,38 @@ class NewController extends \BaseController {
         ));
         $this->layout->content = $view;
     }
+
+    /**
+     * show product
+     * @author Thuan Truong
+     */
+    public function product() {
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', '');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
+
+        $this->layout = View::make('layouts.application');
+        $view = View::make('new.product')->with(array(
+
+        ));
+        $this->layout->content = $view;
+    }
+
+    /**
+     * show product
+     * @author Thuan Truong
+     */
+    public function productdetail($id) {
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', '');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
+
+        $this->layout = View::make('layouts.application');
+        $view = View::make('new.productdetail')->with(array(
+
+        ));
+        $this->layout->content = $view;
+    }
 }

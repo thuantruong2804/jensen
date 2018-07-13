@@ -1,108 +1,75 @@
 <!--footer-->
-<div class="footer mt-0">
+<div class="footer mt-0" style="margin-top: 30px !important;">
     <div class="container-fluid">
-        <div class="row py-1 py-md-4 px-1 px-sm-2 px-lg-0 bg-grey" style="background-color: #fff;">
-            <div class="col-lg-2 footer-col1 text-center text-md-left">
-                <h4 class="h4">Danh mục chính</h4>
-                <ul class="footer-menu">
-                    <li>
-                        <a href="{{ URL::to('/') }}">Giới thiệu</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Lab được ủy quyền</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Tra cứu bảo hành</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Thư viện</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Liên hệ</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-2 footer-col1 text-center text-md-left">
-                <h4 class="h4">Các sản phẩm</h4>
-                <ul class="footer-menu">
-                    <li>
-                        <a href="{{ URL::to('/') }}">Jensen Zirconia</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Stain and Glaze Insync</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Sứ Insync</a>
-                    </li>
-                </ul>
+        <div class="row py-1 py-md-4 px-1 px-sm-2 px-lg-0" style="background-color: #96989A; color: #fff !important;">
+            <div class="col-lg-3 footer-col1 text-center text-md-center">
+                <a href="{{ URL::to('/') }}">
+                    <img src="{{Asset('assets/frontend/images/cropped-jensen_logo_footer.png')}}" style="width: 80%; max-height: 200px; margin-top: 70px;">
+                </a>
             </div>
             <div class="col-lg-4 footer-col1 text-center text-md-left">
-                <div class="video-wrap embed-responsive embed-responsive-16by9" style="max-height: 200px;">
-                    <iframe src="https://www.youtube.com/embed/h1dU4SM2hE8?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;start=70" allowfullscreen></iframe>
+                <h4 class="h4" style="margin-bottom: 0px !important; line-height: 0.2; text-transform: uppercase;">Thông tin liên hệ</h4>
+                <div class="h-decor" style="margin-top: 0px !important; background: -webkit-linear-gradient(left, #fff, #fff); width: 100%"></div>
+                <ul class="icn-list" style="margin-top: 20px;">
+                    <li>
+                        <img src="{{Asset('assets/frontend/images/Map-Icon-2232.png')}}" style="width: 32px; height: 32px; position: absolute; left: 0px; top: 11px;">
+                        175/50/16 Ni Sư Huỳnh Liên – TP HCM
+                        <br>  41 Vũ Phạm Hàm - Yên Hoà - Cầu Giấy - Hà Nội
+                    </li>
+                    <li>
+                        <img src="{{Asset('assets/frontend/images/white-email-icon_90796.png')}}" style="width: 38px; height: 38px; position: absolute; left: 0px; top: 10px;">
+                        <a href="mailto:info@ids-vietnam.com">info@ids-vietnam.com</a>
+                        <br><a href="mailto:sales@ids-vietnam.com">sales@ids-vietnam.com</a>
+                    </li>
+                    <li>
+                        <img src="{{Asset('assets/frontend/images/telephone.png')}}" style="width: 38px; height: 38px; position: absolute; left: 0px; top: 10px;">
+                        <a href="callto:+84 8 2264 6868">+84 8 2264 6868</a>
+                        <br><a href="callto:+84 24 2268 8080">+84 24 2268 8080</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 footer-col1 text-center text-md-left">
+                <h4 class="h4" style="margin-bottom: 0px !important; line-height: 0.2; text-transform: uppercase;">Mạng xã hội Jensen</h4>
+                <div class="h-decor" style="margin-top: 0px !important; background: -webkit-linear-gradient(left, #fff, #fff); width: 100%"></div>
+                <div style="margin-top: 30px;">
+                    <span class="header-social" style="margin-left: 0px;">
+                        <a href="#" class="hovicon" style="margin-left: 0px;">
+                            <img src="{{Asset('assets/frontend/images/white-facebook-512.png')}}" style="width: 44px; height: 44px;">
+                        </a>
+                        <a href="#" class="hovicon">
+                            <img src="{{Asset('assets/frontend/images/Sam+Espensen+Twitter+icon.png')}}" style="width: 44px; height: 44px; margin-left: 10px;">
+                        </a>
+                        <a href="#" class="hovicon">
+                            <img src="{{Asset('assets/frontend/images/some-icon-google.png')}}" style="width: 44px; height: 44px; margin-left: 10px;">
+                        </a>
+                        <a href="#" class="hovicon">
+                            <img src="{{Asset('assets/frontend/images/youtube-256.png')}}" style="width: 44px; height: 44px; margin-left: 10px;">
+                        </a>
+                    </span>
                 </div>
             </div>
             <div class="col-lg-2 footer-col1 text-center text-md-left">
-                <h4 class="h4">Tài liệu tải về</h4>
-                <ul class="footer-menu">
-                    <li>
-                        <a href="{{ URL::to('/') }}">Tải liệu tiếng việt</a>
-                    </li>
-                    <li>
-                        <a href="{{ URL::to('/') }}">Tài liệu tiếng anh </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-2 footer-col1 text-center text-md-left">
-                <a href="{{ URL::to('/') }}"><img src="{{Asset('assets/frontend/images/9.png')}}" style="max-height: 200px;"></a>
+                <a href="{{ URL::to('/') }}"><img src="{{Asset('assets/frontend/images/9.png')}}" style="max-height: 200px; margin-top: 25px;"></a>
             </div>
             <style>
                 ul.footer-menu {
-                    padding-left: 15px;
+                    padding-left: 30px;
                 }
-                ul.footer-menu li {
-                    list-style: none;
+                ul.icn-list li {
+                    padding-left: 40px !important;
                 }
+                ul.icn-list li a {
+                    color: #fff !important;
+                }
+
             </style>
-            <!--
-            <div class="col-sm-6 col-lg-4">
-                <h3 class="text-center text-md-left">Blog Posts</h3>
-                <div class="footer-post d-flex">
-                    <div class="footer-post-photo"><img src="{{Asset('assets/frontend/images/footer-post-author-01.jpg')}}" alt="" class="img-fluid"></div>
-                    <div class="footer-post-text">
-                        <div class="footer-post-title"><a href="post.html">Are you brushing your teeth correctly?</a></div>
-                        <p>Roseman University College of Dental Medicine is providing dental screenings and cleanings free to children ages 18...</p>
-                    </div>
-                </div>
-                <div class="footer-post d-flex">
-                    <div class="footer-post-photo"><img src="{{Asset('assets/frontend/images/footer-post-author-02.jpg')}}" alt="" class="img-fluid"></div>
-                    <div class="footer-post-text">
-                        <div class="footer-post-title"><a href="post.html">FREE Dental Screening & X-Rays</a></div>
-                        <p>Find out if you are qualified for FREE fillings or deep cleanings. Dental students looking for patients for upcoming licensure exam...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <h3 class="text-center text-md-left">Our Contacts</h3>
-                <ul class="icn-list">
-                    <li><i class="icon-placeholder2"></i>1560 Holden Street San Diego,
-                        <br> CA 92139
-                        <br>
-                        <a href="contact.html" class="btn btn-xs btn-gradient"><i class="icon-placeholder2"></i><span>Get directions on the map</span><i class="icon-right-arrow"></i></a>
-                    </li>
-                    <li><i class="icon-telephone"></i><b><span class="phone"><span class="text-nowrap">1-800-267-0000</span>, <span class="text-nowrap">1-800-267-0001</span></span></b>
-                        <br>(24/7 General inquiry)</li>
-                    <li><i class="icon-black-envelope"></i><a href="mailto:info@dentco.net">info@dentco.net</a></li>
-                </ul>
-            </div>
-            -->
         </div>
     </div>
     <div class="footer-bottom">
         <div class="container-fluid">
-            <div class="row text-center text-md-left">
+            <div class="row text-center text-md-center">
                 <div class="col-sm">Copyright © 2018 <a href="#">Jensen Dental</a><span class="d-none d-sm-inline">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
                     <br class="d-sm-none"><a href="#"> Đã đăng ký bản quyền</a></div>
-                <div class="col-sm-auto ml-auto"><span class="d-none d-sm-inline">Trường hợp khẩn cấp&nbsp;&nbsp;&nbsp;</span><i class="icon-telephone"></i>&nbsp;&nbsp;<b>+84 8 2264 6868</b></div>
             </div>
         </div>
     </div>

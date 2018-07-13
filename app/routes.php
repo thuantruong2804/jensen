@@ -14,11 +14,15 @@
  * Routes for Application
  *===============================*/
 Route::get('/',                                 array('as' => 'home', 'uses' => 'HomeController@index'));
+Route::get('/gioi-thieu',                       array('as' => 'home.about', 'uses' => 'HomeController@about'));
 Route::get('/lab-duoc-uy-quyen',                array('as' => 'home.lab', 'uses' => 'HomeController@lab'));
+Route::get('/tra-cuu-bao-hanh',                 array('as' => 'home.card', 'uses' => 'HomeController@card'));
+Route::get('/lien-he',                          array('as' => 'home.contact', 'uses' => 'HomeController@contact'));
 
 Route::get('/tin-tuc',                                  array('as' => 'new.list', 'uses' => 'NewController@listnew'));
 Route::get('/tin-tuc/{id}/{slug}.html',                 array('as' => 'new.detail', 'uses' => 'NewController@detail'));
-
+Route::get('/san-pham',                                 array('as' => 'new.product', 'uses' => 'NewController@product'));
+Route::get('/san-pham/{id}/{slug}.html',                 array('as' => 'new.productdetail', 'uses' => 'NewController@productdetail'));
 
 Route::post('/ckeditorImage',               'HomeController@ckeditorImage');
 // Upload image file uploader
@@ -62,6 +66,14 @@ Route::group(array('before'=>'adminFilter'), function(){
     Route::any('/admin/lab/edit/{id}',             array('as' => 'admin.lab.edit', 'uses' => 'LabController@edit'));
     Route::post('/admin/lab/status/{id}',          array('as' => 'admin.lab.status', 'uses' => 'LabController@status'));
     Route::post('/admin/lab/delete/{id}',          array('as' => 'admin.lab.delete', 'uses' => 'LabController@delete'));
+
+    // routes for cards
+    Route::get('/admin/card',                       array('as' => 'admin.card', 'uses' => 'CardController@index'));
+    Route::any('/admin/card/create',                array('as' => 'admin.card.create', 'uses' => 'CardController@create'));
+    Route::any('/admin/card/edit/{id}',             array('as' => 'admin.card.edit', 'uses' => 'CardController@edit'));
+    Route::post('/admin/card/status/{id}',          array('as' => 'admin.card.status', 'uses' => 'CardController@status'));
+    Route::post('/admin/card/delete/{id}',          array('as' => 'admin.card.delete', 'uses' => 'CardController@delete'));
+    Route::post('/admin/card/import',               array('as' => 'admin.card.import', 'uses' => 'CardController@import'));
 
 
 });

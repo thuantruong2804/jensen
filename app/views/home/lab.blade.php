@@ -12,13 +12,9 @@
 
                     <script type="text/javascript">
                         var locations = [
-                            ['Công ty thiết bị nha khoa Phúc Anh', 11.0525274, 108.1768363, 7],
-                            ['Công ty thiết bị nha khoa Phúc Anh', 16.0525274, 108.1768363, 6],
-                            ['Công ty thiết bị nha khoa Phúc Anh', 12.2597701,109.1064146, 5],
-                            ['Công ty thiết bị nha khoa Vĩnh An', 10.7553411,106.4150288, 4],
-                            ['Công ty thiết bị nha khoa Toàn Tâm', 19.8088602,105.7210143, 3],
-                            ['Công ty thiết bị nha khoa Anh Việt', 21.0228161,105.8019441, 2],
-                            ['Công ty thiết bị nha khoa An Thịnh', 21.5868735, 104.9365364, 1]
+                            <?php foreach ($labs as $lab) { ?>
+                                [ "<?php echo $lab->name; ?> <br> Địa chỉ:  <?php echo $lab->address; ?> <br> SĐT:  <?php echo $lab->phone; ?>",  <?php echo $lab->lat; ?>,  <?php echo $lab->long; ?>,  <?php echo $lab->id; ?>],
+                            <?php } ?>
                         ];
 
                         var map = new google.maps.Map(document.getElementById('map'), {
@@ -136,9 +132,9 @@
     </div>
     <style>
         .banner-call {
-            background-attachment: fixed !important;
-            background: url({{Asset('assets/frontend/images/banner-callus.jpg')}}) no-repeat center top;
-            background-attachment: scroll;
+            -background-attachment: fixed !important;
+            background: url({{Asset('assets/frontend/images/jumbo3.jpg')}}) no-repeat center;
+            -background-attachment: scroll;
             background-size: auto auto;
             height: 360px;
             padding-top: 30px;

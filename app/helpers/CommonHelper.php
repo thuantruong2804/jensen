@@ -10,6 +10,7 @@ class CommonHelper {
      */
     public static function replaceErrorMessage($messageArr) {
         foreach($messageArr as $key => $str_err) {
+            $str_err = str_replace('card name', 'Bệnh nhân', $str_err);
             $str_err = str_replace('username', 'Tên đăng nhập', $str_err);
             $str_err = str_replace('ex password', 'Mật khẩu cấp 2', $str_err);
             $str_err = str_replace('old password', 'Mật khẩu cũ', $str_err);
@@ -40,6 +41,8 @@ class CommonHelper {
             $str_err = str_replace('address', 'Địa chỉ', $str_err);
             $str_err = str_replace('lat', 'Vĩ độ', $str_err);
             $str_err = str_replace('long', 'Kinh độ', $str_err);
+            $str_err = str_replace('release', 'Ngày phát hành', $str_err);
+            $str_err = str_replace('expire', 'Hạn bảo hành', $str_err);
 
             $messageArr[$key] = $str_err;
         }

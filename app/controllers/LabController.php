@@ -114,172 +114,27 @@ class LabController extends \BaseController {
     }
     
     /**
-     * Delete Account 
+     * Delete Lab 
      * @author Thuan Truong
      * @param id
      * @return response
      */
     public function delete($id) {
-        $account = Account::find($id);
-        if (empty($account)) {
-            return Redirect::action('AccountController@index');
+        $lab = Lab::find($id);
+        if (empty($lab)) {
+            return Redirect::action('LabController@index');
         }
-        Account::destroy($id);
+        Lab::destroy($id);
         
-        Session::flash('f_notice', 'Tài khoản đã được xóa thành công');
+        Session::flash('f_notice', 'Lab đã được xóa thành công');
         return Response::json(array(
             'status' => 1,
-            'href' => URL::to('/admin/account'),
+            'href' => URL::to('/admin/lab'),
         ));
     }
 
     
-    /**
-     * page login
-     * @author Thuan Truong
-     */
-    public function login() {
-        $input = array_map('trim', Input::all());
-        if (!empty($input)) {
-            $validator = $this->account->validateCredentials($input);
-            if ($validator->passes()) {
-                $account = $this->account->checkLoginApp($input['username'], $input['password']);
-                if ($account instanceof Account) {
-                    if (isset($input['remember']) && $input['remember'] == 1) {
-                        setcookie('username', $input['username'], time()+3600*24*30);
-                        setcookie('password', $input['password'], time()+3600*24*30);
-                    }
-                    Session::put('auth', $account->ID);
-                    return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => route('account.characters')));
-                } else {
-                    return Response::json(array('status' => 0, 'code' => 'corect',  'message' => 'Tài khoản hoặc mật khẩu không đúng'));
-                }
-            } else {
-                if (Request::ajax()) {
-                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
-                } 
-            }
-        } else {
-            $this->layout = View::make('layouts.application');
-            $view = View::make('account.login')->with(array());
-            
-            $this->layout->content = $view;
-        }
-        
-    }
-
-
-    /**
-     * Change Password
-     * @author Thuan Truong
-     */
-    public function changePassword() {
-        $input = array_map('trim', Input::all());
-        if (!empty($input)) {
-            $validator = $this->account->validateChangePassword($input);
-            if ($validator->passes()) {
-                $currentAccount = BaseController::getAccountInfo();
-                $account = $this->account->checkLoginApp($currentAccount->UserName, $input['password']);
-                if ($account instanceof Account) {
-
-                    $accountUpdate = Account::find($currentAccount->ID);
-                    $accountUpdate->password_token_key = uniqid('', true);
-                    $accountUpdate->password_token_expire = date('Y-m-d H:i:s', strtotime("+10 minutes"));
-                    $accountUpdate->update();
-
-
-
-                    $contentEmail = $this->getContentEmailChangePassword($accountUpdate);
-                    $this->email->add('Xác nhận đổi mật khẩu', $account->Email, '', $contentEmail);
-
-                    Session::flash('f_notice', 'Đã gửi link đổi mật khẩu vào email của tài khoản');
-                    return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => route('account.characters')));
-                } else {
-                    return Response::json(array('status' => 0, 'code' => 'invalid_data',  'messages' => array('password' => array('Mật khẩu không chính xác'))));
-                }
-            } else {
-                if (Request::ajax()) {
-                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
-                }
-            }
-        }
-
-    }
-
-
-    /**
-     * @return json response
-     */
-    public function updatePassword($id) {
-        $account = Account::whereRaw('password_token_key = ? and password_token_expire >= ?', [$id, date('Y-m-d H:i:s')])->first();
-
-        if (!empty($account)) {
-            if (!Session::has('auth')) {
-                Session::put('auth', $account->ID);
-            }
-
-            $input = array_map('trim', Input::all());
-            if (!empty($input)) {
-                $validator = $this->account->validateUpdatePassword($input);
-                if ($validator->passes()) {
-                    if($input['confirm_password'] == $input['password']){
-                        $updateAccount = Account::find($account->ID);
-                        $updateAccount->Password = strtoupper(hash('whirlpool', $input['password']));
-                        $updateAccount->password_token_key = '';
-                        $updateAccount->password_token_expire = '';
-                        $updateAccount->update();
-
-                        Session::flash('f_notice', 'Mật khẩu đã được cập nhật thành công');
-                        return Response::json(array('status' => 1, 'code' => 'success', 'redirect' => URL::to('/tai-khoan/quan-ly-nhan-vat')));
-                    } else {
-                        return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => array('confirm_password' => array('Nhập lại mật khẩu không khớp'))));
-                    }
-                } else {
-                    return Response::json(array('status' => 0, 'code' => 'invalid_data', 'messages' => CommonHelper::replaceErrorMessage($validator->messages()->getMessages())));
-                }
-            } else {
-                $this->layout = View::make('layouts.application');
-                $view = View::make('account.updatepassword')->with(array(
-                    'currentAccount' => $account
-                ));
-
-                $this->layout->content = $view;
-            }
-        } else {
-            Session::flash('f_error', 'Link đổi mật khẩu không chính xác hoặc đã hết hạn ');
-            return Redirect::to('/tai-khoan/quan-ly-nhan-vat');
-        }
-    }
-
-
-    /**
-     * @return json response
-     */
-    public function updateEmail($id) {
-        $account = Account::whereRaw('email_token_key = ? and email_token_expire >= ?', [$id, date('Y-m-d H:i:s')])->first();
-
-        if (!empty($account)) {
-            if (!Session::has('auth')) {
-                Session::put('auth', $account->ID);
-            }
-
-                $updateAccount = Account::find($account->ID);
-                $updateAccount->Email = $updateAccount->email_new;
-                $updateAccount->email_token_key = '';
-                $updateAccount->email_token_expire = '';
-                $updateAccount->email_new = '';
-                $updateAccount->Password_Clear = '';
-                $updateAccount->update();
-
-                Session::flash('f_notice', 'Email đã được cập nhật thành công');
-                return Redirect::to('/tai-khoan/quan-ly-nhan-vat');
-        } else {
-            Session::flash('f_error', 'Link đổi email không chính xác hoặc đã hết hạn ');
-            return Redirect::to('/tai-khoan/quan-ly-nhan-vat');
-        }
-    }
-
-
+   
     /**
      * Send mail called by cronjob
      * Set up command to run url: '/sendMail'

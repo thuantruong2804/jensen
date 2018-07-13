@@ -6295,8 +6295,12 @@ h6 {
   display: inline-block;
   height: 1px;
   width: 60px;
-  background-color: #1e76bd;
-  background: -webkit-linear-gradient(left, #278cdd, #88bfec); }
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb76b+0,ff7c00+1,ffa73d+100,ff7f04+100 */
+background: #ffb76b; /* Old browsers */
+background: -moz-linear-gradient(left, #ffb76b 0%, #ff7c00 1%, #ffa73d 100%, #ff7f04 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #ffb76b 0%,#ff7c00 1%,#ffa73d 100%,#ff7f04 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #ffb76b 0%,#ff7c00 1%,#ffa73d 100%,#ff7f04 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=1 ); /* IE6-9 */ }
   .h-decor + h5 {
     line-height: 34px;
     margin-bottom: 0; }
@@ -6357,8 +6361,8 @@ h6 {
   font-size: 14px;
   line-height: 18px;
   padding: 19px 39px;
-  color: #1e76bd;
-  border: 1px solid #1e76bd;
+  color: #FBBA41;
+  border: 1px solid #FBBA41;
   border-radius: 30px;
   text-transform: uppercase;
   background: transparent;
@@ -8453,7 +8457,7 @@ body.noScroll {
   word-spacing: -2px;
   align-items: center;
   min-height: 48px;
-  background: #1e76bd; }
+  background: #FBBA41; }
   .header-topline,
   .header-topline a {
     color: #fff; }
@@ -8475,7 +8479,7 @@ body.noScroll {
   padding: 0 18px;
   font-size: 14px;
   line-height: 30px;
-  color: #1e76bd;
+  color: #FBBA41;
   background-color: #fff;
   border-radius: 15px;
   word-spacing: 3px; }
@@ -8483,11 +8487,11 @@ body.noScroll {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: .1px;
-    color: #1e76bd; }
+    color: #FBBA41; }
   .header-phone [class*='icon-'] {
     font-size: 17px;
     top: 2px;
-    color: #1e76bd; }
+    color: #FBBA41; }
 
 .header-social:not(:first-child) {
   margin-left: 6px; }
@@ -8655,10 +8659,10 @@ body.noScroll {
     .header-nav .nav-item > .nav-link {
       font-size: 16px; } }
   .header-nav .nav-item > .nav-link:hover {
-    color: #1e76bd;
+    color: #FBBA41;
     transition: 0.3s; }
 .header-nav .nav-item.active > .nav-link {
-  color: #1e76bd; }
+  color: #FBBA41; }
 .header-nav .nav-item > .nav-link:before {
   content: "";
   position: absolute;
@@ -8666,8 +8670,8 @@ body.noScroll {
   bottom: 0;
   width: 0%;
   height: 1px;
-  background-color: #1e76bd;
-  background: linear-gradient(to right, #1b68a7 0, #5ca8e5 100%);
+  background-color: #FBBA41;
+  background: linear-gradient(to right, #FBBA41 0, #FBBA41 100%);
   transition: all 0.5s ease-in-out 0s; }
 .header-nav .nav-item:hover > .nav-link:before {
   width: 100%;
@@ -9077,7 +9081,7 @@ body.noScroll {
 
 .footer-bottom {
   padding: 11px 0;
-  background: #1e76bd;
+  background: #FBBA41;
   font-size: 15px;
   line-height: 26px;
   font-weight: 300; }
@@ -9211,7 +9215,7 @@ body.noScroll {
   width: 63px;
   height: 63px;
   border-radius: 50%;
-  background: #2184d3;
+  background: #FBBA41;
   font-size: 18px;
   line-height: 63px;
   color: #fff;
@@ -9231,7 +9235,7 @@ body.noScroll {
     display: inline-block;
     transition: 0.5s; }
   .backToTop:hover {
-    box-shadow: 0 0 0 10px rgba(33, 132, 211, 0.2); }
+    box-shadow: 0 0 0 10px rgba(251, 186, 65, 0.2); }
     .backToTop:hover [class*='icon'] {
       -moz-transform: scaleX(-1);
       -o-transform: scaleX(-1);

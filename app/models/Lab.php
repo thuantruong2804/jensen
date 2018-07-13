@@ -1,5 +1,4 @@
 <?php
-use Illuminate\Auth\UserInterface;
 class Lab extends Eloquent {
     
     protected $table = 'labs';

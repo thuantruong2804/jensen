@@ -24,10 +24,10 @@
                     <span class="menu-item-parent">Quản lý lab</span>
                 </a>
             </li>
-            <li class="{{ Route::currentRouteName() == 'admin.product' ? 'active' : '' }}">
-                <a href="{{ URL::to('/admin/product') }}" title="Quản lý sản phẩm">
-                    <i class="fa fa-lg fa-fw fa-car"></i> 
-                    <span class="menu-item-parent">Quản lý sản phẩm</span>
+            <li class="{{ Route::currentRouteName() == 'admin.card' ? 'active' : '' }}">
+                <a href="{{ URL::to('/admin/card') }}" title="Quản lý thẻ bảo hành">
+                    <i class="fa fa-lg fa-fw fa-comments-o"></i>
+                    <span class="menu-item-parent">Quản lý thẻ bảo hành</span>
                 </a>
             </li>
         </ul>

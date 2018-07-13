@@ -65,7 +65,7 @@ class HomeController extends BaseController {
      */
     public function index() {
         Session::put('title', 'Jensen Dental');
-        Session::put('description', 'Cộng đồng Grand Theft Auto - San Andreas tại Việt Nam. Máy chủ chính thức với IP: GVC.WTF:7777. Bạn sẽ được trải nghiệm qua tất cả nhân vật trong cuộc sống thực tế để có thể phô diễn khả năng của chúng ta cho mọi người xem. Tất cả mọi thứ đã có trong GvC , bạn hãy vào để giao lưu , làm quen với mọi người nào !');
+        Session::put('description', '');
         Session::put('image', Asset('assets/images/banner-bg-1.png'));
         Session::put('url', URL::to('/'));
 
@@ -81,12 +81,29 @@ class HomeController extends BaseController {
     }
 
     /**
+     * show about
+     * @author Thuan Truong
+     */
+    public function about() {
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', '');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
+
+        $this->layout = View::make('layouts.application');
+        $view = View::make('home.about')->with(array(
+            
+        ));
+        $this->layout->content = $view;
+    }
+
+    /**
      * show lab
      * @author Thuan Truong
      */
     public function lab() {
         Session::put('title', 'Jensen Dental');
-        Session::put('description', 'Cộng đồng Grand Theft Auto - San Andreas tại Việt Nam. Máy chủ chính thức với IP: GVC.WTF:7777. Bạn sẽ được trải nghiệm qua tất cả nhân vật trong cuộc sống thực tế để có thể phô diễn khả năng của chúng ta cho mọi người xem. Tất cả mọi thứ đã có trong GvC , bạn hãy vào để giao lưu , làm quen với mọi người nào !');
+        Session::put('description', '');
         Session::put('image', Asset('assets/images/banner-bg-1.png'));
         Session::put('url', URL::to('/'));
 
@@ -94,6 +111,56 @@ class HomeController extends BaseController {
 
         $this->layout = View::make('layouts.application');
         $view = View::make('home.lab')->with(array(
+            'labs' => $labs
+        ));
+        $this->layout->content = $view;
+    }
+
+    /**
+     * show card
+     * @author Thuan Truong
+     */
+    public function card() {
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', '');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
+
+        $input = array_map('trim', Input::all());
+        if (!empty($input)) {
+            $cardNo = isset($input['card_no']) ? $input['card_no'] : '';
+            $card = Card::whereRaw('card_no = ? and status = 1', [mb_strtoupper($cardNo)])->first();
+
+            $this->layout = View::make('layouts.application');
+            $view = View::make('home.card_detail')->with(array(
+                'card' => $card
+            ));
+            $this->layout->content = $view;
+        } else {
+            $this->layout = View::make('layouts.application');
+            $view = View::make('home.card')->with(array(
+                
+            ));
+            $this->layout->content = $view;
+        }
+    }
+
+
+
+    /**
+     * show lab
+     * @author Thuan Truong
+     */
+    public function contact() {
+        Session::put('title', 'Jensen Dental');
+        Session::put('description', '');
+        Session::put('image', Asset('assets/images/banner-bg-1.png'));
+        Session::put('url', URL::to('/'));
+
+        $labs = Lab::whereRaw('status = ?', [1])->get();
+
+        $this->layout = View::make('layouts.application');
+        $view = View::make('home.contact')->with(array(
             'labs' => $labs
         ));
         $this->layout->content = $view;

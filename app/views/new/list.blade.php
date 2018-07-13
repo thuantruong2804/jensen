@@ -1,63 +1,105 @@
 @section('content')
-    <h3 class="nk-decorated-h-2">
-        <span>
-            Danh sách<span class="text-main-1"> tin tức</span>
-        </span>
-    </h3>
-
-    <div class="row">
-        <div class="col-xs-8">
-            @if (sizeof($news) > 0)
-                @foreach ($news as $new)
-                    <div>
-                        <div class="product-item" style="margin-top: 0px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px #ABA1A2 solid;">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <a href="{{ URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html') }}">
-                                        <?php $imageUrl = Media::find($new->media_id); ?>
-                                        <img class="media-object" src="{{ $imageUrl->path.$imageUrl->thumb }}" alt="..." style="width: 240px; height: 140px;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <a class="title-new-detail" href="{{ URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html') }}">
-                                        <h4 class="media-heading" style="margin-top: 0px;">{{ $new->title }}</h4>
-                                    </a>
-                                    <p style="font-size: 13px; color: #fff;"> {{ substr(strip_tags($new->content), 0, 250) }}...</p>
-                                    <?php $accountNews = Account::find($new->user_id); ?>
-                                    <p style="font-size: 13px; color: #fff;">Người đăng: {{ $accountNews->UserName }} | Ngày đăng: {{ date('d/m/Y', strtotime($new->created_at)) }}</p>
-                                </div>
-                            </div>
+    <!--section welcome-->
+    <div class="section" style="margin-top: 5px;">
+        <div class="container">
+            <div class="row text-center text-lg-left" style="margin-top: 30px;">
+                <div class="col-lg-8">
+                    <div class="title-wrap text-center text-lg-left" style="border-bottom: 1px #96989A solid; padding-bottom: 30px;">
+                        <h4 class="h4"> <a href="{{ URL::to('/tin-tuc/1/tieu-de-tin-tuc.html') }}">Jensen Dental Hosts Live MiYO® Demonstration in California </a></h4>
+                        <div>
+                            <p class="entry-meta"><time class="entry-time" itemprop="datePublished" datetime="2018-05-26T09:08:35-05:00">May 26, 2018</time> by Jensen  </p>
+                            <img src="http://jensendental.com/wp-content/uploads/2018/06/20180518_152842.jpg" style="width: 100%">
                         </div>
+                        <div style="margin-top: 20px;">
+                            <div id="panel-20057-0-0-1" class="so-panel widget widget_sow-editor panel-last-child" data-index="1"><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+    <p><span style="font-family: arial, helvetica, sans-serif;">On Friday May 18, Jensen Dental hosted a <em>Make it Your Own</em>, LIVE MIYO hands-on demonstration, taught by ceramist James Choi at the Delta Marriott Hotel in Garden Grove, California. During the 3-hour demonstration, in addition to learning how to apply MiYO Colors and Structure building materials, attendees learned user friendly techniques to raise and lower value easily, how to create depth, vitality and texture found in natural enamel in unprecedented thicknesses of 0.1mm-0.2mm, and how to quickly match shades and create clear, shiny smooth surface texture in one firing. To learn more about how MiYO makes it possible to achieve highly esthetic restorations that mimic the internal characteristics, surface texture and vitality of natural teeth, easier, faster and with greater control than ever before, while also reducing remakes and increasing profits, contact Jensen at 800-243-2000 or visit.www.jensendental.com/miyo.</span></p>
+</div>
+</div></div>
+                        </div>
+
+
+
                     </div>
-                @endforeach
-            @endif
-            <div style="text-align: center;">
-                {{ $news->links() }}
+
+                    <div class="title-wrap text-center text-lg-left" style="border-bottom: 1px #96989A solid; padding-bottom: 30px;">
+                        <h4 class="h4"> <a href="{{ URL::to('/tin-tuc/1/tieu-de-tin-tuc.html') }}">Identica T500 Scanner </a></h4>
+                        <div>
+                            <p class="entry-meta"><time class="entry-time" itemprop="datePublished" datetime="2018-05-26T09:08:35-05:00">May 26, 2018</time> by Jensen  </p>
+                            <img src="http://jensendental.com/wp-content/uploads/2015/04/T500-accessories-500x500.png" style="width: 100%; max-height: 400px;">
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <div id="panel-20057-0-0-1" class="so-panel widget widget_sow-editor panel-last-child" data-index="1"><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+    <p><span style="font-family: arial, helvetica, sans-serif;">On Friday May 18, Jensen Dental hosted a <em>Make it Your Own</em>, LIVE MIYO hands-on demonstration, taught by ceramist James Choi at the Delta Marriott Hotel in Garden Grove, California. During the 3-hour demonstration, in addition to learning how to apply MiYO Colors and Structure building materials, attendees learned user friendly techniques to raise and lower value easily, how to create depth, vitality and texture found in natural enamel in unprecedented thicknesses of 0.1mm-0.2mm, and how to quickly match shades and create clear, shiny smooth surface texture in one firing. To learn more about how MiYO makes it possible to achieve highly esthetic restorations that mimic the internal characteristics, surface texture and vitality of natural teeth, easier, faster and with greater control than ever before, while also reducing remakes and increasing profits, contact Jensen at 800-243-2000 or visit.www.jensendental.com/miyo.</span></p>
+</div>
+</div></div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="title-wrap text-center text-lg-left" style="border-bottom: 1px #96989A solid; padding-bottom: 30px;">
+                        <h4 class="h4"> <a href="{{ URL::to('/tin-tuc/1/tieu-de-tin-tuc.html') }}">Jensen Dental Hosts Live MiYO® Demonstration in California </a></h4>
+                        <div>
+                            <p class="entry-meta"><time class="entry-time" itemprop="datePublished" datetime="2018-05-26T09:08:35-05:00">May 26, 2018</time> by Jensen  </p>
+                            <img src="http://jensendental.com/wp-content/uploads/2018/06/20180518_152842.jpg" style="width: 100%">
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <div id="panel-20057-0-0-1" class="so-panel widget widget_sow-editor panel-last-child" data-index="1"><div class="so-widget-sow-editor so-widget-sow-editor-base">
+<div class="siteorigin-widget-tinymce textwidget">
+    <p><span style="font-family: arial, helvetica, sans-serif;">On Friday May 18, Jensen Dental hosted a <em>Make it Your Own</em>, LIVE MIYO hands-on demonstration, taught by ceramist James Choi at the Delta Marriott Hotel in Garden Grove, California. During the 3-hour demonstration, in addition to learning how to apply MiYO Colors and Structure building materials, attendees learned user friendly techniques to raise and lower value easily, how to create depth, vitality and texture found in natural enamel in unprecedented thicknesses of 0.1mm-0.2mm, and how to quickly match shades and create clear, shiny smooth surface texture in one firing. To learn more about how MiYO makes it possible to achieve highly esthetic restorations that mimic the internal characteristics, surface texture and vitality of natural teeth, easier, faster and with greater control than ever before, while also reducing remakes and increasing profits, contact Jensen at 800-243-2000 or visit.www.jensendental.com/miyo.</span></p>
+</div>
+</div></div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" itemscope="" itemtype="https://schema.org/WPSideBar">      <section id="recent-posts-3" class="widget widget_recent_entries"><div class="widget-wrap">     <h4 class="widget-title widgettitle">Recent Posts</h4>
+        <ul>
+                                            <li>
+                    <a href="http://jensendental.com/jensen-dental-hosts-a-make-it-your-own-live-miyo-demonstration-in-california/">Jensen Dental Hosts Live MiYO® Demonstration in California</a>
+                                    </li>
+                                            <li>
+                    <a href="http://jensendental.com/jensen-presents-miyo-at-the-35th-anniversary-oral-design-international-symposium-in-hollywood/">Jensen Presents MiYO at the 35TH Anniversary Oral Design International Symposium In Hollywood</a>
+                                    </li>
+                                    <li>
+                    <a href="http://jensendental.com/jensen-dental-hosts-a-make-it-your-own-live-miyo-demonstration-in-california/">Jensen Dental Hosts Live MiYO® Demonstration in California</a>
+                                    </li>
+                                            <li>
+                    <a href="http://jensendental.com/jensen-presents-miyo-at-the-35th-anniversary-oral-design-international-symposium-in-hollywood/">Jensen Presents MiYO at the 35TH Anniversary Oral Design International Symposium In Hollywood</a>
+                                    </li>
+                    </ul>
+        </div></section>
+</aside>
+                </div>
+                
             </div>
         </div>
-        <div class="col-xs-4">
-            @if (sizeof($latestNews) > 0)
-                @foreach ($latestNews as $new)
-                    <div>
-                        <div class="product-item" style="margin-top: 0px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px #ABA1A2 solid;">
-                            <div class="media">
-                                <div class="media-left media-middle">
-                                    <a href="{{ URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html') }}">
-                                        <?php $imageUrl = Media::find($new->media_id); ?>
-                                        <img class="media-object" src="{{ $imageUrl->path.$imageUrl->thumb }}" alt="..." style="width: 100px; height: 64px;">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <a class="title-new-detail" href="{{ URL::to('/tin-tuc/'.$new->new_id.'/'.$new->slug.'.html') }}">
-                                        <h4 class="media-heading" style="text-transform: none; margin-top: 0px;">{{ $new->title }}</h4>
-                                    </a>
-                                    <p style="font-size: 13px; text-align: left; color: #fff;"> Ngày đăng: {{ date('d/m/Y', strtotime($new->created_at)) }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
+    </div>
+
+    <!--section-->
+    <div class="section" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="container">
+            
         </div>
     </div>
+    <!--//section-->
+    <style>
+        .zoom {
+            transition: transform .2s; /* Animation */
+        }
+
+        .zoom:hover {
+            transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+    </style>
+
+    <!--section call us-->
 @stop
+

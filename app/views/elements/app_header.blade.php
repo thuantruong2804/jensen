@@ -39,22 +39,22 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="about.html">Giới thiệu</a>
+                                        <a class="nav-link" href="{{ URL::to('/gioi-thieu') }}">Giới thiệu</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ URL::to('/lab-duoc-uy-quyen') }}" class="nav-link">Lab được ủy quyền</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="our-specialist.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Tra cứu bảo hành</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a href="blog.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
+                                        <a href="{{ URL::to('/tra-cuu-bao-hanh') }}" class="nav-link dropdown-toggle" data-toggle="dropdown">Tra cứu bảo hành</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="testimonials.html">Thư viện</a>
+                                        <a href="{{ URL::to('/san-pham') }}" class="nav-link dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                                        <a class="nav-link" href="{{ URL::to('/tin-tuc') }}">Tin tức</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ URL::to('/lien-he') }}">Liên hệ</a>
                                     </li>
                                 </ul>
                             </div>
